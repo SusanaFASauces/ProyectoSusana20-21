@@ -30,9 +30,9 @@
                 <a href="../proyectoDWES/indexProyectoDWES.html"><img src="webroot/icons/volver.png" alt="volver"></a>
             </div>
             <address>Contacta conmigo en: susana.fabant@educa.jcyl.es</address>
-            <p>- 20 de Enero 2021 -</p>
+            <p>- 21 de Enero 2021 -</p>
             <div class="iconos-dcha">
-                <a href="https://github.com/SusanaFASauces" target="_blank"><img src="webroot/icons/github.png" alt="github"></a>
+                <a href="https://github.com/SusanaFASauces/ProyectoSusana20-21" target="_blank"><img src="webroot/icons/github.png" alt="github"></a>
             </div>
         </footer>
     </body>

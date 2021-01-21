@@ -1,8 +1,8 @@
 <?php
 /**
  * @author Susana Fabián Antón
- * @since 13/01/2021
- * @version 19/01/2021
+ * @since 20/01/2021
+ * @version 20/01/2021
  */
 class UsuarioPDO implements UsuarioDB {
     /**

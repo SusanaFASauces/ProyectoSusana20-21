@@ -1,18 +1,18 @@
 /* 
     Autor.- Susana Fabián Antón
     Fecha creación.- 30/09/2020
-    Última modificación.- 20/01/2021
+    Última modificación.- 21/01/2021
 */
 /*
-    Colores:
-        Verde: #67A282
-        Marrón: #BFA393
-        Marrón x2: #9D8B80
-        Marrón /4: #DFD1C9
-        Azul: #93AFBF
-        Azul x2: #6E838F
-        Azul /4: #C9D7DF
-        Negro: #2A262C
+    Colores
+    Verde: #67A282
+    Marrón: #BFA393
+    Marrón x2: #9D8B80
+    Marrón /4: #DFD1C9
+    Azul: #93AFBF
+    Azul x2: #6E838F
+    Azul /4: #C9D7DF
+    Negro: #2A262C
 */
 /* Reglas de estilo de reseteo */
 * {
@@ -28,6 +28,9 @@
     ul { width: -moz-fit-content }
     input[type=radio] { width: -moz-fit-content }
     input[type=submit] { width: -moz-fit-content }
+    .botones-sesion a { width: -moz-fit-content }
+    .botones-sesion input { width: -moz-fit-content }
+    .boton { width: -moz-fit-content }
 }
 /* Reglas de estilo generales */
 html {
@@ -38,7 +41,7 @@ body>header {
     text-align: center;
 }
 main {
-    margin: 0px 40px 100px 40px;
+    margin: 0px 40px 80px 40px;
 }
 h1 {
     margin: 10px auto;
@@ -124,14 +127,19 @@ footer img {
     border-collapse: separate;
     box-shadow: none;
 }
-.tabla tr:nth-child(even) {
+.tabla tr:nth-child(odd) {
     background-color: #C9D7DF;
+}
+.tabla tr:nth-child(even) {
+    background-color: white;
 }
 .tabla th, .tabla td {
     font-size: initial;
     border: none;
     position: initial;
     padding: 10px 20px;
+    border-right: 1px solid #C9D7DF;
+    border-left: 1px solid #C9D7DF;
 }
 .tabla td img {
     display: block;
@@ -157,6 +165,9 @@ li {
     padding: 15px 5px;
     margin: auto;
     width: 80%;
+}
+.formulario {
+    /*height: 63%;*/
 }
 .sesion p, .formulario p {
     margin: 10px 20px;  
@@ -188,7 +199,7 @@ input {
     padding: 5px 10px;
     width: 100%;
 }
-input:read-only {
+#editarPerfil input[type="text"]:read-only {
     background-color: #6E838F;
     color: white;
 }
@@ -279,12 +290,11 @@ select {
     display: grid;
     grid-template-areas: "bienvenida bienvenida" "imagen sesion" "funciones funciones";
     grid-template-columns: 25% auto;
-    grid-template-rows: 15% 60% auto;
-    
-    height: 60%;
+    grid-template-rows: 12% 65% auto;
+    height: 63%;
 }
 .bienvenida {
-    font-size: 1.2em;
+    font-size: 1.4em;
     grid-area: bienvenida;
     text-align: center;
 }
@@ -330,3 +340,83 @@ form[name="funciones"] > input {
     margin: 10px;
     padding: 15px;
 }
+
+/*vMtoDepartamentos*/
+.mtoDepartamentos {
+    background-color: #C9D7DF;
+    border-radius: 15px;
+    margin: auto;
+    height: 63%; width: 80%;
+}
+.busqueda {
+    background-color: #6E838F;
+    border-radius: 15px 15px 0 0;
+    height: 15%;
+    padding: 20px;
+    
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+}
+.busqueda form {
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+.busqueda input {
+    display: inline-block;
+}
+.busqueda input[type="text"] {
+    border-radius: 15px;
+    width: 100%;
+}
+.busqueda input[type="image"] {
+    background-color: #93AFBF;
+    border-radius: 30%;
+    float: right;
+    height: 32px; width: auto;
+    margin-left: 10px;
+}
+.botones {
+    width: 100%
+}
+.departamentos {
+    height: 73%;
+    border-left: 2px solid #C9D7DF;
+    border-right: 2px solid #C9D7DF;
+}
+.departamentos table {
+    border-collapse: collapse;
+}
+.departamentos th {
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+.departamentos td {
+    font-size: 0.8em;
+    text-align: center;
+}
+.paginacion {
+    padding: 0 25px;
+    background-color: #93AFBF;
+    border-radius: 0 0 15px 15px;
+    height: 12%;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+}
+.paginacion input[type="image"] {
+    height: auto; width: 48px;
+}
+
+/*
+    Colores
+    Verde: #67A282
+    Marrón: #BFA393
+    Marrón x2: #9D8B80
+    Marrón /4: #DFD1C9
+    Azul: #93AFBF
+    Azul x2: #6E838F
+    Azul /4: #C9D7DF
+    Negro: #2A262C
+*/

@@ -6,4 +6,4 @@
 DROP DATABASE DAW208DBSusana2021;
 
 -- borramos el usuario administrador de la base de datos
-DROP USER usuarioDAW208DAW208DBSusana2021;
+DROP USER usuarioDAW208DBSusana2021;

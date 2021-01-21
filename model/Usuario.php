@@ -1,8 +1,8 @@
 <?php
 /**
  * @author Susana Fabián Antón
- * @since 12/01/2021
- * @version 12/01/2021
+ * @since 20/01/2021
+ * @version 21/01/2021
  */
 class Usuario {
     //definición de los atributos de la clase
@@ -11,7 +11,9 @@ class Usuario {
     private $descUsuario;
     private $numAccesos;
     private $fechaHoraUltimaConexion;
+    private $fechaHoraUltimaConexionAnterior;
     private $perfil;
+    private $listaOpinionesUsuario;
     
     /**
      * Instancia un objeto de la clase Usuario

@@ -1,11 +1,11 @@
 -- Autor: Susana Fabián Antón
 -- Fecha creación: 20/01/2021
--- Última modificación: 20/01/2021
+-- Última modificación: 21/01/2021
 
 -- utilizamos de la base de datos
 USE DAW208DBSusana2021;
 
--- insertamos datos en la tablas de nuestra base de datos
+-- insertamos datos en las tablas de nuestra base de datos
 INSERT INTO T01_Usuario(T01_CodUsuario, T01_Password, T01_DescUsuario) VALUES
     ('nereaa',SHA2('nereaapaso',256),'Nerea Álvarez'),
     ('miguel',SHA2('miguelpaso',256),'Miguel Ángel Aranda'),
@@ -26,6 +26,14 @@ INSERT INTO T01_Usuario(T01_CodUsuario, T01_Password, T01_DescUsuario) VALUES
     ('amor',SHA2('amorpaso',256),'Amor Rodriguez'),
     ('antonio',SHA2('antoniopaso',256),'Antonio Jáñez'),
     ('leticia',SHA2('leticiapaso',256),'Leticia Núñez');
+
+INSERT INTO T02_Departamento(T02_CodDepartamento,T02_DescDepartamento,T02_FechaCreacionDepartamento,T02_VolumenDeNegocio) VALUES
+    ('INF','Departamento de informatica',SYSDATE(),1),
+    ('VEN','Departamento de ventas',SYSDATE(),2),
+    ('CON','Departamento de contabilidad',SYSDATE(),3),
+    ('COC','Departamento de cocina',SYSDATE(),4),
+    ('MEC','Departamento de mecanica',SYSDATE(),5),
+    ('MAT','Departamento de matematicas',SYSDATE(),6);
 
 -- insertamos el usuario con el rol administrador
 INSERT INTO T01_Usuario(T01_CodUsuario, T01_Password, T01_DescUsuario, T01_Perfil) VALUES ('admin',SHA2('adminpaso',256),'Administrador','administrador');

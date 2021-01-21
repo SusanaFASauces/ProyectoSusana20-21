@@ -20,7 +20,7 @@ if(isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el botón de cerrar s
     exit;
 }
 if(isset($_REQUEST['mtoDepartamentos'])) { // si se ha pulsado el botón de editar perfil
-    $_SESSION[controladorEnCurso] = $aControladores['wip']; //guardamos en la sesión el controlador que debe ejecutarse
+    $_SESSION[controladorEnCurso] = $aControladores['mtoDepartamentos']; //guardamos en la sesión el controlador que debe ejecutarse
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }
