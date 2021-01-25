@@ -1,7 +1,7 @@
 /* 
     Autor.- Susana Fabián Antón
     Fecha creación.- 30/09/2020
-    Última modificación.- 21/01/2021
+    Última modificación.- 24/01/2021
 */
 /*
     Colores
@@ -17,10 +17,14 @@
 /* Reglas de estilo de reseteo */
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: initial !important;
+    margin: 0;
+    padding: 0;
 }
+a {
+    color: white;
+    text-decoration: none;
+}
+/* Soporte para el navegador Firefox => ACTUALIZAR ESTA VAINA*/
 @supports (-moz-appearance:none) {
     h3 { width: -moz-fit-content }
     h4 { width: -moz-fit-content }
@@ -34,62 +38,20 @@
 }
 /* Reglas de estilo generales */
 html {
-    position: relative;
     min-height: 100%;
 }
-body>header {
-    text-align: center;
-}
-main {
-    margin: 0px 40px 80px 40px;
-}
-h1 {
+header {
+    background-color: #93AFBF;
+    color: white;
     margin: 10px auto;
     padding: 5px;
+    text-align: center;
     width: 80%;
-    
-    /* Colores*/
-    background-color: #93AFBF;
-    color: white;
 }
 h2 {
-    border-bottom: 1.5px solid black;
-    margin: auto;
-    width: 20%;
-}
-h3 {
-    border-bottom: 1.5px solid black;
-    margin: 10px 0px 5px 0px;
-    width: fit-content;
-}
-h4 {
-    padding: 5px 20px;
-    margin-bottom: 10px;
-    width: fit-content;
-    
-    /* Colores */
-    background-color: #93AFBF;
     color: white;
 }
-h5 {
-    font-size: 1em;
-    border-bottom: 1.5px solid black;
-    margin: 10px 0px 5px 0px;
-    width: fit-content;
-    
-}
-section {
-    margin: 5px;
-    padding: 5px;
-}
-article {
-    margin: 5px;
-    padding: 5px;
-}
-p {
-    margin: 10px 5px;
-}
-footer {
+footer { /* ESTO SIGUE CHUNGO */
     margin: 10px auto;
     padding: 5px;
     position: absolute;
@@ -103,6 +65,119 @@ footer {
     background-color: #9D8B80;
     color: white;
 }
+.caja {
+    background-color: #C9D7DF;
+    border-radius: 15px;
+    height: 70%; width: 70%;
+    margin: 15px auto;
+}
+.caja p {
+    margin: 5px;
+    text-align: center;
+}
+.barra-superior {
+    background-color: #6E838F;
+    border-radius: 15px 15px 0 0;
+    height: 15%;
+    /*Posicionamiento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cuerpo {
+    border-left: 2px solid #C9D7DF; /* Estas dos reglas son solo de mtoDepartamentos */
+    border-right: 2px solid #C9D7DF;
+    height: 70%;
+    /*Posicionamiento*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.barra-inferior {
+    background-color: #93AFBF;
+    border-radius: 0 0 15px 15px;
+    height: 15%;
+    /*Posicionamiento*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.barra-inferior p {
+    color: white;
+    margin: 2px;
+    text-align: center;
+}
+
+/* Reglas de estilo de formularios */
+input {
+    border: none;
+    margin: 5px 0;
+    padding: 5px 10px;
+    width: 100%;
+}
+input:read-only {
+    background-color: #EDF0F1;
+    color: #6E838F;
+}
+input[type=text], input[type=password] {
+    border-radius: 5px;
+}
+input[type=submit] {
+    background-color: #93AFBF;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 3px;
+    min-width: 25%;
+    padding: 5px 30px;
+    width: fit-content;
+}
+input[type=submit]:active {
+    background-color: #6E838F;
+}
+.botones {
+    text-align: center;
+    padding: 5px;
+}
+
+/* Reglas de estilo de registro */
+#formulario-registro {
+    width: 35%;
+}
+#inicio-sesion-registro p, #inicio-sesion-registro form{
+    display: inline-block;
+    margin: 0;
+}
+#inicio-sesion-registro input{
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+}
+
+/* Reglas de estilo de registro */
+form[name="editarPerfil"] label {
+    display: inline-block;
+    border-bottom: 1px solid #6E838F;
+    padding: 2px;
+    width: 15%;
+    text-align: left;
+    margin-right: 5px; 
+}
+form[name="editarPerfil"] p input {
+    display: inline-block;
+    width: 40%;
+}
+#formulario-mi-cuenta {
+    width: 100%;
+}
+
+
+/* REGLAS VIEJAS*/ 
+/* Un montón de vainas del footer que tengo que cambiar */
 footer address {
     margin: 10px 5px;
 }
@@ -111,10 +186,18 @@ footer address {
     top: 15px;
     right: 25px;  
 }
+.iconos-dcha img {
+    margin-left: 15px;
+}
 .iconos-izq {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 15px;
-    left: 35px;  
+    left: 25px;  
+}
+.iconos-izq img {
+    margin-right: 15px;
 }
 footer img {
     width: 45px;
@@ -146,157 +229,24 @@ footer img {
     margin: auto;
 }
 
-/* Reglas de estilo de listas */
-ul {
-    list-style-position: inside;
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid black;
-    width: fit-content;
-}
-li {
-    padding: 5px;
-}
-
-/* Reglas de estilo de formularios */
-.sesion, .formulario { 
-    background-color: #C9D7DF;
-    border-radius: 15px;
-    padding: 15px 5px;
-    margin: auto;
-    width: 80%;
-}
-.formulario {
-    /*height: 63%;*/
-}
-.sesion p, .formulario p {
-    margin: 10px 20px;  
-}
-#editarPerfil p {
-    text-align: center;
-    margin: 10px 20px;  
-}
-#editarPerfil label {
-    width: 20%;
-    font-weight: bold;
-}
-#editarPerfil input[type=text] {
-    width: 70%;
-    /*border: 1px solid #6E838F;*/
-    border-radius: 5px;
-}
-#editarPerfil label, #editarPerfil input[type=text] {
-    display: inline-block;
-    text-align: left;
-    font-size: 1em;
-    padding: 5px 10px;
-    margin: 0 10px;
-}
-input {
-    border: none;
-    display: inline-block;
-    margin: 5px 0;
-    padding: 5px 10px;
-    width: 100%;
-}
-#editarPerfil input[type="text"]:read-only {
-    background-color: #6E838F;
-    color: white;
-}
-input[type=radio] {
-    width: fit-content;
-}
-input[type=submit] {
-    background-color: #93AFBF;
-    display: block;
-    color: white;
-    font-weight: bold;
-    font-size: 1em;
-    
-    width: fit-content;
-    min-width: 25%;
-    margin: auto;
-}
-input[type=submit]:active {
-    background-color: #6E838F;
-}
-select {
-    background-color: white;
-    border: 2px solid #6E838F;
-    color: #6E838F;
-    font-weight: bold;
-    padding: 0px;
-    margin: 5px;
-}
-.botones-sesion {
-    text-align: center;
-    padding: 5px;
-    margin: auto;
-}
-.botones-sesion a, .botones-sesion input {
-    display: inline-block;
-    background-color: #93AFBF;
-    padding: 5px 30px;
-    color: white;
-    margin: 0 3px;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    width: fit-content;
-    /*min-width: 20%;*/
-}
-.botones-sesion a:active {
-    background-color: #6E838F;
-}
-
-/* Reglas de estilo extra */
-.inline-block {
-    display: inline-block;
-}
-.margin {
-    margin: 5px;
-    padding: 5px;
-}
-.incompleto {
-    background-color: #DFD1C9;
-}
-.center {
-    text-align: center;
-}
-.boton {
-    background-color: #BFA393;
-    margin: 5px;
-    padding: 10px;
-    text-align: center;
-    width: fit-content;
-}
-.boton:hover {
-    background-color: #9D8B80;
-}
-.boton>a{
-    text-decoration: none;
-    color:white;
-}
-.unset {
-    margin: 0;
-    padding: 0;
-}
-
-
-
 /*NUEVOS ESTILOS*/
 /*vInicio*/
 .inicio {
     display: grid;
     grid-template-areas: "bienvenida bienvenida" "imagen sesion" "funciones funciones";
     grid-template-columns: 25% auto;
-    grid-template-rows: 12% 65% auto;
-    height: 63%;
+    grid-template-rows: 15% 65% auto;
+    height: 100%;
+    width: 100%;
 }
 .bienvenida {
-    font-size: 1.4em;
+    font-size: 1.2em;
     grid-area: bienvenida;
     text-align: center;
+    /*Posicionamiento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contenedor-imagen {
     align-items: center;
@@ -312,10 +262,16 @@ select {
     grid-area: sesion;
     position: relative;
     margin: 20px 50px 20px 5px;
-    padding: 5px;
+    padding: 10px;
+    /*Posicionamiento*/
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.info-sesion > p {
+.info-sesion p {
     margin: 10px;
+    text-align: left;
 }
 form[name="sesion"] {
     position: absolute;
@@ -336,9 +292,9 @@ form[name="funciones"] {
 }
 form[name="funciones"] > input {
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 10px;
-    padding: 15px;
+    padding: 10px;
 }
 
 /*vMtoDepartamentos*/
@@ -380,8 +336,9 @@ form[name="funciones"] > input {
 .botones {
     width: 100%
 }
+
 .departamentos {
-    height: 73%;
+    background-color: #C9D7DF;
     border-left: 2px solid #C9D7DF;
     border-right: 2px solid #C9D7DF;
 }
@@ -400,7 +357,7 @@ form[name="funciones"] > input {
     padding: 0 25px;
     background-color: #93AFBF;
     border-radius: 0 0 15px 15px;
-    height: 12%;
+    height: 15%;
     align-items: center;
     justify-content: flex-end;
     display: flex;
@@ -408,15 +365,3 @@ form[name="funciones"] > input {
 .paginacion input[type="image"] {
     height: auto; width: 48px;
 }
-
-/*
-    Colores
-    Verde: #67A282
-    Marrón: #BFA393
-    Marrón x2: #9D8B80
-    Marrón /4: #DFD1C9
-    Azul: #93AFBF
-    Azul x2: #6E838F
-    Azul /4: #C9D7DF
-    Negro: #2A262C
-*/

@@ -1,31 +1,54 @@
 <!--
     Autor: Susana Fabián Antón
     Fecha creación: 20/01/2021
-    Última modificación: 20/01/2021
+    Última modificación: 24/01/2021
 -->
-<form class="formulario" name="editarPerfil" id="editarPerfil" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-    <p> <!-- Usuario -->
-        <label for="lblCodUsuario">Usuario</label>
-        <input type="text" id="lblCodUsuario" name="codUsuario" value="<?php echo $codUsuario ?>" readonly>
-    </p>
-    <p> <!-- Descripción -->
-        <label for="lblDesc">Descripción</label>
-        <input type="text" id="lblDesc" name="descUsusario" value="<?php echo $descUsuario ?>">
-    </p>
-    <p> <!-- Perfil -->
-        <label for="lblPerfil">Perfil</label>
-        <input type="text" id="lblPerfil" name="perfil" value="<?php echo $perfil ?>" readonly>
-    </p>
-    <p> <!-- Número de accesos -->
-        <label for="lblNumAccesos">Número de accesos</label>
-        <input type="text" id="lblNumAccesos" name="numAccesos" value="<?php echo $numAccesos ?>" readonly>
-    </p>
-    <p> <!-- Última conexión -->
-        <label for="lblUltimaConexion">Última conexión</label>
-        <input type="text" id="lblUltimaConexion" name="ultimaConexion" value="<?php echo $fechaHoraUltimaConexion ?>" readonly>
-    </p>
-    <div class="botones-sesion">
-        <input type="submit" value="Guardar cambios" name="guardarCambios">
-        <input type="submit" value="Cancelar" name="cancelar">
-    </div>
-</form>
+<article class="caja">
+    <section class="barra-superior">
+        <h2>Aplicación resumen Susana 20-21</h2>
+    </section>
+    <section class="cuerpo">
+        <div id="formulario-mi-cuenta">
+            <p>Modifica la información de tu perfil</p>
+            <form name="editarPerfil" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+                <p> <!-- Usuario -->
+                    <label for="lblCodUsuario">Usuario</label>
+                    <input type="text" id="lblCodUsuario" name="codUsuario" value="<?php echo $codUsuarioEnCurso ?>" readonly>
+                </p>
+                <p> <!-- Descripción -->
+                    <label for="lblDesc">Descripción</label>
+                    <input type="text" id="lblDesc" name="descUsusario" value="<?php echo $descUsuarioEnCurso ?>">
+                </p>
+                <p> <!-- Perfil -->
+                    <label for="lblPerfil">Perfil</label>
+                    <input type="text" id="lblPerfil" name="perfil" value="<?php echo $perfilEnCurso ?>" readonly>
+                </p>
+                <p> <!-- Número de accesos -->
+                    <label for="lblNumAccesos">Número de accesos</label>
+                    <input type="text" id="lblNumAccesos" name="numAccesos" value="<?php echo $numAccesosEnCurso ?>" readonly>
+                </p>
+                <p> <!-- Última conexión -->
+                    <label for="lblUltimaConexion">Última conexión</label>
+                    <input type="text" id="lblUltimaConexion" name="ultimaConexion" value="<?php echo $fechaHoraUltimaConexionEnCurso ?>" readonly>
+                </p>
+                <div class="botones">
+                    <input type="submit" value="Guardar cambios" name="guardarCambios">
+                    <input type="submit" value="Cancelar" name="cancelar">
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="barra-inferior">
+        <p>
+            <a href="api/ArbolDeNavegacion.pdf" target="_blank">Árbol de navegación</a> | 
+            <a href="api/CatalogoDeRequisitos.pdf" target="_blank">Catálogo de requisitos</a> |
+            <a href="api/DiagramaDeCasosDeUso.pdf" target="_blank">Diagrama de casos de uso</a> | 
+            <a href="api/DiagramaDeClases.pdf" target="_blank">Diagrama de clases</a>
+        </p>
+        <p>
+            <a href="api/EstructuraDeAlmacenamiento.jpg" target="_blank">Estructura de almacenamiento</a> | 
+            <a href="api/ModeloFisicoDeDatos.pdf" target="_blank">Modelo físico de datos</a> | 
+            <a href="api/RelacionDeFicheros.pdf" target="_blank">Relación de ficheros</a>
+        </p>
+    </section>
+</article>

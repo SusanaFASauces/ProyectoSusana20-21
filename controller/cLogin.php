@@ -6,7 +6,7 @@
  */
 
 if(isset($_REQUEST['registro'])) { // si se ha pulsado el botón de registro
-    $_SESSION[controladorEnCurso] = $aControladores['wip']; //guardamos en la sesión el controlador que debe ejecutarse
+    $_SESSION[controladorEnCurso] = $aControladores['registro']; //guardamos en la sesión el controlador que debe ejecutarse
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }
@@ -20,10 +20,10 @@ $aErrores = [ // creamos un array para guardar los errores que surjan durante la
     'password' => null
 ];
 
-if (isset($_REQUEST['iniciarSesion'])) { // si se ha pulsado el botón de iniciar sesión
+if(isset($_REQUEST['iniciarSesion'])) { // si se ha pulsado el botón de iniciar sesión
     // VALIDACIÓN DE LOS DATOS -> utilizando los métodos de la librería de validaciones
-    $aErrores['usuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 100, 1, OBLIGATORIO); // maximo, mínimo y obligatoriedad
-    $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['password'], 64, 1, 1, OBLIGATORIO); //máximo, mínimo, tipo y obligatoriedad
+    $aErrores['usuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 15, 1, OBLIGATORIO); // maximo, mínimo y obligatoriedad
+    $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['password'], 16, 1, 2, OBLIGATORIO); //máximo, mínimo, tipo y obligatoriedad
     foreach ($aErrores as $campo => $error) { // recorremos el vector en busca de errores
         if ($error != null) { // si encontramos errores
             $entradaOK = false;

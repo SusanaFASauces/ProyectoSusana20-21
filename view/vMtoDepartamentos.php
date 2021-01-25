@@ -3,8 +3,8 @@
     Fecha creación: 21/01/2021
     Última modificación: 21/01/2021
 -->
-<div class="mtoDepartamentos">
-    <div class="busqueda">
+<div class="caja">
+    <div class="busqueda barra-superior">
         <form>
             <input type="text" name="busqueda" placeholder="Buscar...">
             <div class="botones">
@@ -14,7 +14,7 @@
             </div>
         </form>
     </div>
-    <div class="departamentos">
+    <div class="departamentos cuerpo">
         <table class="tabla">
             <tr>
                 <th>Código</th>
@@ -82,7 +82,7 @@
             </tr>
         </table>
     </div>
-    <div class="paginacion">
+    <div class="paginacion barra-inferior">
         <form>
             <input type="image" name="volver" src="webroot/icons/volver.png" alt="volver">
         </form>

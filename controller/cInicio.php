@@ -14,6 +14,11 @@ if(isset($_REQUEST['editarPerfil'])) { // si se ha pulsado el botón de editar p
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }
+if(isset($_REQUEST['borrarCuenta'])) { // si se ha pulsado el botón de borrar cuenta
+    $_SESSION[controladorEnCurso] = $aControladores['borrarCuenta']; //guardamos en la sesión el controlador que debe ejecutarse
+    header('Location: index.php'); //enviamos al usuario de vuelta al index
+    exit;
+}
 if(isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el botón de cerrar sesión
     session_destroy(); //destruimos la sesión
     header('Location: index.php'); //enviamos al usuario de vuelta al index
@@ -24,11 +29,11 @@ if(isset($_REQUEST['mtoDepartamentos'])) { // si se ha pulsado el botón de edit
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }
-if(isset($_REQUEST['opinar'])) { // si se ha pulsado el botón de editar perfil
-    $_SESSION[controladorEnCurso] = $aControladores['wip']; //guardamos en la sesión el controlador que debe ejecutarse
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
-}
+//if(isset($_REQUEST['opinar'])) { // si se ha pulsado el botón de editar perfil
+//    $_SESSION[controladorEnCurso] = $aControladores['wip']; //guardamos en la sesión el controlador que debe ejecutarse
+//    header('Location: index.php'); //enviamos al usuario de vuelta al index
+//    exit;
+//}
 $oUsuario = $_SESSION[usuarioDAW208DBSusana2021]; //recuperamos el usuario guardado en la sesión
 $descUsuario = $oUsuario->__get(descUsuario); //recuperamos la descripción del usuario
 

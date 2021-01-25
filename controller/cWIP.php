@@ -6,7 +6,6 @@
  */
 
 if(isset($_REQUEST['volver'])) { // si se ha pulsado el botón de volver
-    $_SESSION[controladorEnCurso] = null; //eliminamos el controlador en curso
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }

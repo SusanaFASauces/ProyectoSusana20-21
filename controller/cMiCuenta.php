@@ -16,14 +16,14 @@ if(isset($_REQUEST['cancelar'])) { // si se ha pulsado el botón de cancelar
 }
 
 $oUsuario = $_SESSION[usuarioDAW208DBSusana2021]; //recuperamos el usuario guardado en la sesión
-$codUsuario = $oUsuario->__get(codUsuario); //recuperamos el código del usuario
-$descUsuario = $oUsuario->__get(descUsuario); //recuperamos la descripción del usuario
-$perfil = $oUsuario->__get(perfil); //recuperamos el perfil del usuario
-$numAccesos = $oUsuario->__get(numAccesos); //recuperamos el número de accesos del usuario
-$fechaHoraUltimaConexion = $oUsuario->__get(fechaHoraUltimaConexion); //recuperamos la fecha de última conexión del usuario
+$codUsuarioEnCurso = $oUsuario->__get(codUsuario); //recuperamos el código del usuario
+$descUsuarioEnCurso = $oUsuario->__get(descUsuario); //recuperamos la descripción del usuario
+$perfilEnCurso = $oUsuario->__get(perfil); //recuperamos el perfil del usuario
+$numAccesosEnCurso = $oUsuario->__get(numAccesos); //recuperamos el número de accesos del usuario
+$fechaHoraUltimaConexionEnCurso = $oUsuario->__get(fechaHoraUltimaConexion); //recuperamos la fecha de última conexión del usuario
 
 if(isset($_REQUEST['guardarCambios'])) { // si se ha pulsado el botón de guardar cambios
-    $oUsuarioModificado = UsuarioPDO::modificarUsuario($codUsuario, $_REQUEST['descUsusario']); //modificamos los datos del usuario
+    $oUsuarioModificado = UsuarioPDO::modificarUsuario($codUsuarioEnCurso, $_REQUEST['descUsusario']); //modificamos los datos del usuario
     if(!is_null($oUsuarioModificado)) { //si la modificación se realiza correctamente
         $_SESSION[usuarioDAW208DBSusana2021] = $oUsuarioModificado; //guardamos el nuevo objeto usuario en la sesión
     }
