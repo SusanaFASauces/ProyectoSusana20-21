@@ -1,5 +1,5 @@
 # ProyectoSusana20-21
-Repositorio de la aplicación resumen <strong>Susana20-21</strong>
+Repositorio de la aplicación resumen <strong>Susana 20-21</strong>
 del módulo Desarrollo Web Entorno Servidor
 
 <strong>Autor:</strong> Susana Fabián Antón<br>
