@@ -5,10 +5,6 @@
  * @version 20/01/2021
  */
 
-if(!isset($_SESSION[usuarioDAW208DBSusana2021])) { //si el usuario no ha iniciado sesión
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
-}
 if(isset($_REQUEST['cancelar'])) { // si se ha pulsado el botón de cancelar
     $_SESSION[controladorEnCurso] = $aControladores['inicio']; //guardamos en la sesión el controlador que debe ejecutarse
     header('Location: index.php'); //enviamos al usuario de vuelta al index

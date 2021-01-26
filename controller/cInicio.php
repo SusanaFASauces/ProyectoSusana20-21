@@ -5,10 +5,6 @@
  * @version 20/01/2021
  */
 
-if(!isset($_SESSION[usuarioDAW208DBSusana2021])) { //si el usuario no ha iniciado sesión
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
-}
 if(isset($_REQUEST['editarPerfil'])) { // si se ha pulsado el botón de editar perfil
     $_SESSION[controladorEnCurso] = $aControladores['miCuenta']; //guardamos en la sesión el controlador que debe ejecutarse
     header('Location: index.php'); //enviamos al usuario de vuelta al index
@@ -29,7 +25,12 @@ if(isset($_REQUEST['mtoDepartamentos'])) { // si se ha pulsado el botón de edit
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }
-//if(isset($_REQUEST['opinar'])) { // si se ha pulsado el botón de editar perfil
+if(isset($_REQUEST['rest'])) { // si se ha pulsado el botón de servicios rest
+    $_SESSION[controladorEnCurso] = $aControladores['rest']; //guardamos en la sesión el controlador que debe ejecutarse
+    header('Location: index.php'); //enviamos al usuario de vuelta al index
+    exit;
+}
+//if(isset($_REQUEST['opinar'])) { // si se ha pulsado el botón de opinar
 //    $_SESSION[controladorEnCurso] = $aControladores['wip']; //guardamos en la sesión el controlador que debe ejecutarse
 //    header('Location: index.php'); //enviamos al usuario de vuelta al index
 //    exit;

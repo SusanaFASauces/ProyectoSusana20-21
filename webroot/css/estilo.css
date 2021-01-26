@@ -1,7 +1,7 @@
 /* 
     Autor.- Susana Fabián Antón
     Fecha creación.- 30/09/2020
-    Última modificación.- 24/01/2021
+    Última modificación.- 26/01/2021
 */
 /*
     Colores
@@ -26,15 +26,7 @@ a {
 }
 /* Soporte para el navegador Firefox => ACTUALIZAR ESTA VAINA*/
 @supports (-moz-appearance:none) {
-    h3 { width: -moz-fit-content }
-    h4 { width: -moz-fit-content }
-    h5 { width: -moz-fit-content }
-    ul { width: -moz-fit-content }
-    input[type=radio] { width: -moz-fit-content }
     input[type=submit] { width: -moz-fit-content }
-    .botones-sesion a { width: -moz-fit-content }
-    .botones-sesion input { width: -moz-fit-content }
-    .boton { width: -moz-fit-content }
 }
 /* Reglas de estilo generales */
 html {
@@ -85,8 +77,8 @@ footer { /* ESTO SIGUE CHUNGO */
     justify-content: center;
 }
 .cuerpo {
-    border-left: 2px solid #C9D7DF; /* Estas dos reglas son solo de mtoDepartamentos */
-    border-right: 2px solid #C9D7DF;
+/*    border-left: 2px solid #C9D7DF;  Estas dos reglas son solo de mtoDepartamentos 
+    border-right: 2px solid #C9D7DF;*/
     height: 70%;
     /*Posicionamiento*/
     display: flex;
@@ -109,6 +101,12 @@ footer { /* ESTO SIGUE CHUNGO */
     margin: 2px;
     text-align: center;
 }
+.barra-inferior input[type="image"] {
+    height: auto; width: 48px;
+}
+.barra-inferior a:hover {
+    text-decoration: underline;
+}
 
 /* Reglas de estilo de formularios */
 input {
@@ -117,11 +115,11 @@ input {
     padding: 5px 10px;
     width: 100%;
 }
-input:read-only {
+input[type=text]:read-only {
     background-color: #EDF0F1;
     color: #6E838F;
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=date] {
     border-radius: 5px;
 }
 input[type=submit] {
@@ -144,7 +142,7 @@ input[type=submit]:active {
 
 /* Reglas de estilo de registro */
 #formulario-registro {
-    width: 35%;
+    width: 36%;
 }
 #inicio-sesion-registro p, #inicio-sesion-registro form{
     display: inline-block;
@@ -158,7 +156,7 @@ input[type=submit]:active {
     text-decoration: underline;
 }
 
-/* Reglas de estilo de registro */
+/* Reglas de estilo de x */
 form[name="editarPerfil"] label {
     display: inline-block;
     border-bottom: 1px solid #6E838F;
@@ -175,6 +173,69 @@ form[name="editarPerfil"] p input {
     width: 100%;
 }
 
+/* Reglas de estilo de rest */
+#cuerpo-rest {
+    display: grid;
+    grid-template-areas: "titulo servicio" "formulario servicio" ;
+    grid-template-columns: 35% auto;
+    grid-template-rows: 10% auto;
+    
+/*    display: flex;
+    align-items: center;
+    justify-content: space-around;*/
+    height: 100%; width: 100%;
+}
+#cuerpo-rest>* {
+    margin: 0;
+    height: 100%; width: 100%;
+    padding: 10px;
+    /* Posicionamiento */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /*border: 1px solid black;*/
+}
+#titulo-rest {
+    border-bottom-right-radius: 15px;
+    background-color: #93AFBF;
+    color: white;
+    /*box-shadow: 1px 1px 3px #93AFBF;*/
+    grid-area: titulo;
+}
+#formulario-rest {
+    grid-area: formulario;
+}
+#formulario-rest p:first-child {
+    text-decoration: underline;
+}
+#servicio-rest {
+    grid-area: servicio;
+    display: block;
+}
+#servicio-rest img {
+    width: 35%;
+    margin: 10px;
+    float: left;
+}
+#servicio-rest {
+    padding: 10px 15px; 
+}
+#servicio-rest p:first-child {
+    margin: 0;
+    font-variant: small-caps;
+}
+#servicio-rest p:last-child {
+    font-size: 0.8em;
+    text-align: left;
+    margin: 10px;
+}
+#inferior-rest {
+    align-items: flex-end;
+}
+#inferior-rest input {
+    margin: 0 15px;
+}
 
 /* REGLAS VIEJAS*/ 
 /* Un montón de vainas del footer que tengo que cambiar */
@@ -255,14 +316,14 @@ footer img {
     justify-content: center;
 }
 .contenedor-imagen img {
-    width: 150px;
+    width: 80%;
 }
 .info-sesion {
-    box-shadow: 3px 3px 3px 3px #93AFBF;
+    box-shadow: 3px 2px 3px 3px #93AFBF;
     grid-area: sesion;
     position: relative;
-    margin: 20px 50px 20px 5px;
-    padding: 10px;
+    margin: 5px 50px 5px 5px;
+    padding: 15px;
     /*Posicionamiento*/
     display: flex;
     align-items: flex-start;

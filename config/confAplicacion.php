@@ -2,7 +2,7 @@
 /**
  * @author Susana Fabián Antón
  * @since 20/01/2021
- * @version 22/01/2021
+ * @version 26/01/2021
  */
 
 //incluimos la librería de validaciones
@@ -14,6 +14,7 @@ require_once 'model/DB.php';
 require_once "model/Usuario.php"; 
 require_once "model/UsuarioPDO.php";
 require_once "model/DBPDO.php";
+require_once "model/REST.php";
 
 $aControladores = [ //array que contiene las rutas de los distintos controladores
     "borrarCuenta" => "controller/cBorrarCuenta.php",
@@ -22,6 +23,7 @@ $aControladores = [ //array que contiene las rutas de los distintos controladore
     "miCuenta" => "controller/cMiCuenta.php",
     "mtoDepartamentos" => "controller/cMtoDepartamentos.php",
     "registro" => "controller/cRegistro.php",
+    "rest" => "controller/cREST.php",
     "wip" => "controller/cWIP.php"
 ];
 
@@ -33,5 +35,6 @@ $aVistas = [ //array que contiene las rutas de las distintas vistas
     "miCuenta" => "view/vMiCuenta.php",
     "mtoDepartamentos" => "view/vMtoDepartamentos.php",
     "registro" => "view/vRegistro.php",
+    "rest" => "view/vREST.php",
     "wip" => "view/vWIP.php"
 ];

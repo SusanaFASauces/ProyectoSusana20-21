@@ -11,7 +11,8 @@ require_once 'config/confDB.php'; //contiene las constantes de configuración de
 
 session_start(); //iniciamos la sesión
 
-if(isset($_SESSION[controladorEnCurso])) { //si el controlador en curso está definido
+//si un usuario ha iniciado sesión y el controlador en curso está definido, o si el controlador definido es registro
+if((isset($_SESSION[controladorEnCurso]) && isset($_SESSION[usuarioDAW208DBSusana2021])) || $_SESSION[controladorEnCurso]==$aControladores['registro']) { 
     require_once $_SESSION[controladorEnCurso]; //mandamos al usuario a la página que corresponda
 }
 else { //si no

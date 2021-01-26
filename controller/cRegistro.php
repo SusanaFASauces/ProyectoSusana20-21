@@ -5,7 +5,7 @@
  * @version 22/01/2021
  */
 
-if(isset($_REQUEST['iniciarSesion'])) { // si se ha pulsado el botón de editar perfil
+if(isset($_REQUEST['iniciarSesion'])) { // si se ha pulsado el botón de iniciar sesión
     $_SESSION[controladorEnCurso] = $aControladores['login']; //guardamos en la sesión el controlador que debe ejecutarse
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;

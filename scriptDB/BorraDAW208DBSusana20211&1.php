@@ -12,8 +12,7 @@ try { //código susceptible de producir errores
     $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //establecemos que se lancen excepciones cuando se encuentren errores en la conexión
     
     $sqlInsertarTuplas = $miDB->exec( //borramos las tablas de nuestra base de datos
-        "DROP TABLE IF EXISTS T01_Usuario;
-        DROP TABLE IF EXISTS T02_Departamento;"
+        "DROP TABLE IF EXISTS T01_Usuario;"
     );
     
     if($sqlInsertarTuplas>0) { //informamos al usuario de que todo ha ido bien
