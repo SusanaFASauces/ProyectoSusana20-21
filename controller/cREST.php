@@ -5,7 +5,7 @@
  * @version 29/01/2021
  */
 
-if(isset($_REQUEST['volver_x'])) { // si se ha pulsado el botón de editar perfil
+if(isset($_REQUEST['volver_x'])) { // si se ha pulsado el botón de volver
     $_SESSION[controladorEnCurso] = $aControladores['inicio']; //guardamos en la sesión el controlador que debe ejecutarse
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
@@ -19,11 +19,20 @@ if($_REQUEST['servicios']=="omdb"){ //si se ha seleccionado el servicio omdb
         $titulo = str_replace(" ","+",trim($_REQUEST['titulo'])); //sustituimos los espacios por signos de suma
         //llamamos al servicio y le pasamos el título introducido por el usuario
         $aServicioOMDb = REST::sevicioOMDb($titulo);
+        if($aServicioOMDb['Response']=="False") { //si el servicio nos dice que la película no existe
+            //guardamos el mensaje y la imagen de error para pasárselos a la vista
+            $tituloEnCurso = "ERROR: ".$aServicioOMDb['Error'];
+            $imagenEnCurso = "webroot/icons/sorry.jpg";
+        }
+        else { //si se ha encontrado la película
+            //guardamos el título y la imagen para pasárselos a la vista
+            $tituloEnCurso = $aServicioOMDb['Title'];
+            $imagenEnCurso = $aServicioOMDb['Poster'];
+        }
     }
     else { //si no
         //llamamos al servicio y le pasamos la película por defecto
         $aServicioOMDb = REST::sevicioOMDb("The+lion+king");
-        
     }
 }
 else { //si no

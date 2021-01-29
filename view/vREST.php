@@ -54,8 +54,8 @@
                     <p><strong>Director:</strong> Roger Allers, Rob Minkoff</p>
                     <p><strong>Premios:</strong> Won 2 Oscars. Another 35 wins & 35 nominations.</p>
                     <p><strong>Argumento:</strong> Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.</p>-->
-                    <p><?php echo $aServicioOMDb['Title'] ?></p>
-                    <img src=<?php echo $aServicioOMDb['Poster'] ?>>
+                    <p><?php echo $tituloEnCurso ?></p>
+                    <img src=<?php echo $imagenEnCurso ?>>
                     <p><strong>Fecha de salida:</strong> <?php echo $aServicioOMDb['Released'] ?></p>
                     <p><strong>Duración:</strong> <?php echo $aServicioOMDb['Runtime'] ?></p>
                     <p><strong>Género:</strong> <?php echo $aServicioOMDb['Genre'] ?></p>
