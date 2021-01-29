@@ -2,7 +2,7 @@
 /**
  * @author Susana Fabián Antón
  * @since 26/01/2021
- * @version 29/01/2021
+ * @version 30/01/2021
  */
 
 if(isset($_REQUEST['volver_x'])) { // si se ha pulsado el botón de volver
