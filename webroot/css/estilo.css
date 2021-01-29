@@ -1,7 +1,7 @@
 /* 
     Autor.- Susana Fabián Antón
     Fecha creación.- 30/09/2020
-    Última modificación.- 26/01/2021
+    Última modificación.- 27/01/2021
 */
 /*
     Colores
@@ -206,15 +206,27 @@ form[name="editarPerfil"] p input {
 #formulario-rest {
     grid-area: formulario;
 }
-#formulario-rest p:first-child {
+#formulario-rest select {
     text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    font-size: 0.9em;
+    width: fit-content;
+    text-align-last: center;
 }
+#formulario-rest input[type=date], #formulario-rest input[type=text] {
+    width: 80%;
+}
+
 #servicio-rest {
     grid-area: servicio;
-    display: block;
+}
+#servicio-rest > div {
+    width: 100%;
+    height: 100%;
 }
 #servicio-rest img {
-    width: 35%;
+    width: 30%;
     margin: 10px;
     float: left;
 }
@@ -225,7 +237,7 @@ form[name="editarPerfil"] p input {
     margin: 0;
     font-variant: small-caps;
 }
-#servicio-rest p:last-child {
+#servicio-rest p:not(:first-child) {
     font-size: 0.8em;
     text-align: left;
     margin: 10px;
