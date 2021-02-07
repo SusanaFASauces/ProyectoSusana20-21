@@ -2,7 +2,7 @@
 /**
  * @author Susana Fabián Antón
  * @since 26/01/2021
- * @version 27/01/2021
+ * @version 07/02/2021
  */
 class REST {
     /**
@@ -26,5 +26,16 @@ class REST {
     public static function sevicioOMDb($titulo) {
         //llamamos al servicio, pasándole el título al campo t, y decodificamos el json que nos devuelve
         return json_decode(file_get_contents("http://www.omdbapi.com/?apikey=88ff8107&t=$titulo"), true);        
+    }
+    
+    /**
+     * 
+     * @param type $cifra la cifra que queremos convertir
+     * @param type $udInicial la unidad en la que se encuentra esa cifra
+     * @param type $udFinal la unidad a la que queremos convertir esta cifra
+     * @return type array que contiene información sobre la conversión que se ha realizado
+     */
+    public static function servicioConversor($cifra,$udInicial,$udFinal) {
+        return json_decode(file_get_contents("http://192.168.31.208/proyectoSusana20-21/api/conversor.php?cifra=$cifra&udInicial=$udInicial&udFinal=$udFinal"), true); 
     }
 } 

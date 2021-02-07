@@ -1,7 +1,7 @@
 <!--
     Autor: Susana Fabián Antón
     Fecha creación: 26/01/2021
-    Última modificación: 29/01/2021
+    Última modificación: 07/02/2021
 -->
 <article class="caja">
     <section class="barra-superior">
@@ -14,6 +14,7 @@
                 <select name="servicios" form="rest" onchange="enviarFormulario()">
                     <option value="apod" id="apodOpt" <?php echo $apodSelected ?>>APOD: Astronomy Picture of the Day</option>
                     <option value="omdb" id="omdbOpt" <?php echo $omdbSelected ?>>OMDb: Open Movie Database</option>
+                    <option value="conversor" id="conversorOpt" <?php echo $conversorSelected ?>>Conversor de Unidades</option>
                 </select>
                 <div id="apodForm" style="display: <?php echo $apodDisplay ?>">
                     <p>Puedes seleccionar una fecha para ver su imagen</p>
@@ -22,7 +23,7 @@
                             <input type="date" name="fecha" max="<?php echo date('Y-m-d') ?>" value="<?php echo date('Y-m-d') ?>">
                         </p>
                         <div class="botones">
-                            <input type="submit" value="Enviar" name="enviar">
+                            <input type="submit" value="Buscar" name="enviar">
                         </div>
                     </form>
                 </div>
@@ -32,28 +33,40 @@
                         <input type="text" name="titulo" form="rest" placeholder="Nombre de la película (en inglés)">
                     </p>
                     <div class="botones">
-                        <input type="submit" value="Enviar" form="rest" name="enviar" form="rest">
+                        <input type="submit" value="Buscar" form="rest" name="enviar" form="rest">
+                    </div>
+                </div>
+                <div id="conversorForm" style="display: <?php echo $conversorDisplay ?>">
+                    <p>Introduce una cifra y unas unidades de medida para realizar la conversión</p>
+                    <p>
+                        <input type="number" name="cifra" form="rest" placeholder="Cifra">
+                    </p>
+                    <p>
+                        Convertir&nbsp;
+                        <select name="udInicial" form="rest">
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="mg">mg</option>
+                        </select>
+                        &nbsp;a&nbsp;
+                        <select name="udFinal" form="rest">
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="mg">mg</option>
+                        </select>
+                    </p>
+                    <div class="botones">
+                        <input type="submit" value="Convertir" form="rest" name="enviar" form="rest">
                     </div>
                 </div>
             </div>
             <div id="servicio-rest">
                 <div id="apodService" style="display: <?php echo $apodDisplay ?>">
-<!--                    <p>Titulo APOD</p>
-                    <img src="webroot/icons/perro.jpg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta nisi ut tristique tempor. Nulla facilisi. Ut tempus luctus tincidunt. Curabitur cursus diam enim, ac tempor odio congue vitae. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum enim. Sed accumsan, sem ut mattis lobortis, lorem nulla convallis velit, sit amet suscipit turpis sapien quis risus. Cras pellentesque, quam sit amet venenatis vestibulum, tellus nisl suscipit felis, quis finibus nunc odio vel elit. Praesent dictum vestibulum nunc et elementum. Pellentesque ut enim vitae risus pretium semper. Maecenas molestie aliquet nisi nec sodales.</p>-->
                     <p><?php echo $aServicioAPOD['title'] ?></p>
                     <img src="<?php echo $aServicioAPOD['url'] ?>">
                     <p><?php echo $aServicioAPOD['explanation'] ?></p>
                 </div>
                 <div id="omdbService" style="display: <?php echo $omdbDisplay ?>">
-<!--                    <p>The Lion King</p>
-                    <img src="webroot/icons/cartel.jpg">
-                    <p><strong>Fecha de salida:</strong> 24 Jun 1994</p>
-                    <p><strong>Duración:</strong> 88 min</p>
-                    <p><strong>Género:</strong> Animation, Adventure, Drama, Family, Musical</p>
-                    <p><strong>Director:</strong> Roger Allers, Rob Minkoff</p>
-                    <p><strong>Premios:</strong> Won 2 Oscars. Another 35 wins & 35 nominations.</p>
-                    <p><strong>Argumento:</strong> Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.</p>-->
                     <p><?php echo $tituloEnCurso ?></p>
                     <img src=<?php echo $imagenEnCurso ?>>
                     <p><strong>Fecha de salida:</strong> <?php echo $aServicioOMDb['Released'] ?></p>
@@ -62,6 +75,15 @@
                     <p><strong>Director:</strong> <?php echo $aServicioOMDb['Director'] ?></p>
                     <p><strong>Premios:</strong> <?php echo $aServicioOMDb['Awards'] ?></p>
                     <p><strong>Argumento:</strong> <?php echo $aServicioOMDb['Plot'] ?></p>              
+                </div>
+                <div id="conversorService" style="display: <?php echo $conversorDisplay ?>">
+                    <p><?php echo $tituloEnCurso ?></p>
+                    <img src="<?php echo $imagenEnCurso ?>">
+                    <p><strong>Cifra:</strong> <?php echo $aServicioConversor['cifra'] ?></p>
+                    <p><strong>Unidad inicial:</strong> <?php echo $aServicioConversor['udInicial'] ?></p>
+                    <p><strong>Unidad final:</strong> <?php echo $aServicioConversor['udFinal'] ?></p>
+                    <p><strong>Factor de conversión:</strong> 10^<?php echo $aServicioConversor['factorConversion'] ?></p>
+                    <p><?php echo $aServicioConversor['cifra'].$aServicioConversor['udInicial'] ?> equivalen a <?php echo $aServicioConversor['resultado'].$aServicioConversor['udFinal'] ?></p>
                 </div>
             </div>
         </div>
