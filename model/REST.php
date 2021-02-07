@@ -29,13 +29,14 @@ class REST {
     }
     
     /**
+     * Llama al servicio API REST Conversor de Unidades, que convierte los datos recibidos a las unidades solicitadas.
      * 
-     * @param type $cifra la cifra que queremos convertir
-     * @param type $udInicial la unidad en la que se encuentra esa cifra
-     * @param type $udFinal la unidad a la que queremos convertir esta cifra
-     * @return type array que contiene información sobre la conversión que se ha realizado
+     * @param type $cifra la cifra que queremos convertir.
+     * @param type $udInicial la unidad en la que se encuentra esa cifra.
+     * @param type $udFinal la unidad a la que queremos convertir esta cifra.
+     * @return type array que contiene información sobre la conversión que se ha realizado.
      */
     public static function servicioConversor($cifra,$udInicial,$udFinal) {
         return json_decode(file_get_contents("http://192.168.31.208/proyectoSusana20-21/api/conversor.php?cifra=$cifra&udInicial=$udInicial&udFinal=$udFinal"), true); 
     }
-} 
+}   

@@ -26,6 +26,7 @@
                             <input type="submit" value="Buscar" name="enviar">
                         </div>
                     </form>
+                    <a href="https://github.com/nasa/apod-api" target="_blank">Documentación del servicio</a>
                 </div>
                 <div id="omdbForm" style="display: <?php echo $omdbDisplay ?>">
                     <p>Introduce el título de una película para obtener información sobre ella</p>
@@ -35,11 +36,12 @@
                     <div class="botones">
                         <input type="submit" value="Buscar" form="rest" name="enviar" form="rest">
                     </div>
+                    <a href="http://www.omdbapi.com/" target="_blank">Documentación del servicio</a>
                 </div>
                 <div id="conversorForm" style="display: <?php echo $conversorDisplay ?>">
                     <p>Introduce una cifra y unas unidades de medida para realizar la conversión</p>
                     <p>
-                        <input type="number" name="cifra" form="rest" placeholder="Cifra">
+                        <input type="number" step="0.01" name="cifra" form="rest" placeholder="Cifra">
                     </p>
                     <p>
                         Convertir&nbsp;
@@ -58,6 +60,7 @@
                     <div class="botones">
                         <input type="submit" value="Convertir" form="rest" name="enviar" form="rest">
                     </div>
+                    <a href="doc/documentos/ConversorUnidades.pdf" target="_blank">Documentación del servicio</a>
                 </div>
             </div>
             <div id="servicio-rest">

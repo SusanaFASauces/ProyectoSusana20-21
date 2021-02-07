@@ -41,7 +41,7 @@ else if($_REQUEST['servicios']=="conversor") {
     //llamamos al servicio
     if($_REQUEST['enviar']) { 
         $aServicioConversor = REST::servicioConversor($_REQUEST['cifra'],$_REQUEST['udInicial'],$_REQUEST['udFinal']);
-    }
+        }
     if(isset($aServicioConversor['codigoError'])) { //si el servicio nos dice que se ha producido un error
         //guardamos el mensaje de error
         $codigoError = $aServicioConversor['codigoError'];

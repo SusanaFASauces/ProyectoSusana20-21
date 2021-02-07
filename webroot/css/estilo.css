@@ -222,6 +222,12 @@ form[name="editarPerfil"] p input {
 #formulario-rest input[type=date], #formulario-rest input[type=text] {
     width: 80%;
 }
+#formulario-rest a {
+    text-decoration: underline;
+    margin: 5px;
+    text-align: center;
+    display: block;
+}
 #servicio-rest {
     grid-area: servicio;
 }
