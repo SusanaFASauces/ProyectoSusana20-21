@@ -2,7 +2,7 @@
 /**
  * @author Susana Fabián Antón
  * @since 26/01/2021
- * @version 07/02/2021
+ * @version 08/02/2021
  */
 class REST {
     /**

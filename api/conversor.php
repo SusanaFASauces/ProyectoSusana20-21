@@ -2,7 +2,7 @@
 /**
  * @author Susana Fabián Antón
  * @since 03/02/2021
- * @version 07/02/2021
+ * @version 08/02/2021
  */
 //Enlace de ejemplo: https://daw208.ieslossauces.es/proyectoSusana20-21/api/conversor.php?cifra=1&udInicial=kg&udFinal=g
 
