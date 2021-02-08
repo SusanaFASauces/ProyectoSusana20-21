@@ -4,7 +4,7 @@
  * @since 03/02/2021
  * @version 07/02/2021
  */
-//Enlace de ejemplo: http://192.168.31.208/proyectoSusana20-21/api/conversor.php?cifra=1&udInicial=kg&udFinal=g
+//Enlace de ejemplo: https://daw208.ieslossauces.es/proyectoSusana20-21/api/conversor.php?cifra=1&udInicial=kg&udFinal=g
 
 /**
  * Convierte la cifra recibida a la unidad solicitada.

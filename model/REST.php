@@ -37,6 +37,6 @@ class REST {
      * @return type array que contiene información sobre la conversión que se ha realizado.
      */
     public static function servicioConversor($cifra,$udInicial,$udFinal) {
-        return json_decode(file_get_contents("http://192.168.31.208/proyectoSusana20-21/api/conversor.php?cifra=$cifra&udInicial=$udInicial&udFinal=$udFinal"), true); 
+        return json_decode(file_get_contents("https://daw208.ieslossauces.es/proyectoSusana20-21/api/conversor.php?cifra=$cifra&udInicial=$udInicial&udFinal=$udFinal"), true); 
     }
 }   

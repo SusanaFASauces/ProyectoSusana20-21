@@ -42,11 +42,12 @@ else if($_REQUEST['servicios']=="conversor") {
     if($_REQUEST['enviar']) { 
         $aServicioConversor = REST::servicioConversor($_REQUEST['cifra'],$_REQUEST['udInicial'],$_REQUEST['udFinal']);
         }
-    if(isset($aServicioConversor['codigoError'])) { //si el servicio nos dice que se ha producido un error
-        //guardamos el mensaje de error
-        $codigoError = $aServicioConversor['codigoError'];
-        $mensajeError = $aServicioConversor['mensajeError'];
+        if(isset($aServicioConversor['codigoError'])) { //si el servicio nos dice que se ha producido un error
+            //guardamos el mensaje de error
+            $codigoError = $aServicioConversor['codigoError'];
+            $mensajeError = $aServicioConversor['mensajeError'];
     }
+    print_r($aServicioConversor);
     //guardamos el título y la imagen para pasárselos a la vista
     $tituloEnCurso = "Conversor de Unidades";
     $imagenEnCurso = "webroot/icons/calculadora.jpg";
