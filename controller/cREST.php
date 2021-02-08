@@ -47,7 +47,6 @@ else if($_REQUEST['servicios']=="conversor") {
             $codigoError = $aServicioConversor['codigoError'];
             $mensajeError = $aServicioConversor['mensajeError'];
     }
-    print_r($aServicioConversor);
     //guardamos el título y la imagen para pasárselos a la vista
     $tituloEnCurso = "Conversor de Unidades";
     $imagenEnCurso = "webroot/icons/calculadora.jpg";
