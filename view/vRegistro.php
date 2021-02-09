@@ -1,7 +1,7 @@
 <!--
     Autor: Susana Fabián Antón
     Fecha creación: 22/01/2021
-    Última modificación: 24/01/2021
+    Última modificación: 09/02/2021
 -->
 <article class="caja">
     <section class="barra-superior">
@@ -10,18 +10,22 @@
     <section class="cuerpo">
         <div id="formulario-registro">
             <p>Crea tu cuenta de usuario</p>
-            <form name="registro" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+            <form name="registro" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" onsubmit="return validarFormulario()">
                 <p> <!-- Usuario -->
-                    <input type="text" name="codUsuario" placeholder="Código de usuario">
+                    <input type="text" name="codUsuario" id="codUsuario" placeholder="Código de usuario" onblur="validarCampo('codUsuario')">
+                    <span id="codUsuarioErr"></span>
                 </p>
                 <p> <!-- Descripción -->
-                    <input type="text" name="descUsuario" placeholder="Descripción de usuario">
+                    <input type="text" name="descUsuario" id="descUsuario" placeholder="Descripción de usuario" onblur="validarCampo('descUsuario')">
+                    <span id="descUsuarioErr"></span>
                 </p>
                 <p> <!-- Contraseña -->
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" onblur="validarCampo('password')">
+                    <span id="passwordErr"></span>
                 </p>
                 <p> <!-- Confirmación de contraseña -->
-                    <input type="password" name="confirmacionPassword" placeholder="Confirmación de contraseña">
+                    <input type="password" name="confirmacionPassword" id="confirmacionPassword" placeholder="Confirmación de contraseña" onblur="validarCampo('confirmacionPassword')">
+                    <span id="confirmacionPasswordErr"></span>
                 </p>
                 <div class="botones">
                     <input type="submit" value="Registrarse" name="registro">
