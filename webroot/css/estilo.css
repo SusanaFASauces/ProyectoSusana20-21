@@ -1,7 +1,7 @@
 /* 
     Autor.- Susana Fabián Antón
     Fecha creación.- 30/09/2020
-    Última modificación.- 27/01/2021
+    Última modificación.- 09/02/2021
 */
 /*
     Colores
@@ -148,6 +148,11 @@ select {
 /* Reglas de estilo de registro */
 #formulario-registro {
     width: 36%;
+}
+#formulario-registro span {
+    font-size: 0.9em;
+    position: fixed;
+    padding: 5px 10px;
 }
 #inicio-sesion-registro p, #inicio-sesion-registro form{
     display: inline-block;

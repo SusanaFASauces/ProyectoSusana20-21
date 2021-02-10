@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="webroot/css/estilo.css">
         <script src="webroot/js/script.js"></script>
+        <script src="webroot/js/validacionFormularios.js"></script>
     </head>
     <body>
         <header>
@@ -15,7 +16,7 @@
                 /**
                  * @author Susana Fabián Antón
                  * @since 20/01/2021
-                 * @version 07/02/2021
+                 * @version 09/02/2021
                  */
 
                 require_once $vistaEnCurso; //incluimos la vista que corresponda
@@ -27,7 +28,7 @@
                 <a href="https://daw208.ieslossauces.es/" target="_blank"><img src="webroot/icons/webAutor.png" alt="webAutor"></a> 
             </div>
             <address>Contacta conmigo en: susana.fabant@educa.jcyl.es</address>
-            <p>- 7 de Febrero 2021 -</p>
+            <p>- 9 de Febrero 2021 -</p>
             <div class="iconos-dcha">
                 <a href="doc/phpdoc/index.html" target="_blank"><img src="webroot/icons/doc.png" alt="documentacion"></a>
                 <a href="https://github.com/SusanaFASauces/ProyectoSusana20-21" target="_blank"><img src="webroot/icons/github.png" alt="github"></a>
