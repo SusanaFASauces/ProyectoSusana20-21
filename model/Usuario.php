@@ -23,12 +23,15 @@ class Usuario {
      * @param type $descUsuario la descripción del usuario
      * @param type $perfil el tipo de perfil del usuario
      */
-    public function __construct($codUsuario, $password, $descUsuario, $perfil) {
+    public function __construct($codUsuario, $password, $descUsuario, $numAccesos, $fechaHoraUltimaConexion, $perfil) {
         $this->codUsuario = $codUsuario;
         $this->password = $password;
         $this->descUsuario = $descUsuario;
-        $this->numAccesos = 0;
+        $this->numAccesos = $numAccesos;
+        $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
+        $this->fechaHoraUltimaConexionAnterior = null;
         $this->perfil = $perfil;
+        $this->listaOpinionesUsuario = null;
     }
     
     /**

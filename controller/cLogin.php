@@ -2,7 +2,7 @@
 /**
  * @author Susana Fabián Antón
  * @since 20/01/2021
- * @version 20/01/2021
+ * @version 27/02/2021
  */
 
 if(isset($_REQUEST['registro'])) { // si se ha pulsado el botón de registro
@@ -42,6 +42,8 @@ else { // si NO se ha pulsado enviar
 }
 
 if($entradaOK) { // si el formulario se ha rellenado y los datos son correctos
+    $_SESSION[fechaHoraUltimaConexionAnterior] = $oUsuario->__get(fechaHoraUltimaConexion); //guardamos en la sesión la fecha de la última conexión
+    $oUsuario = UsuarioPDO::registrarUltimaConexion($oUsuario->__get(codUsuario), date("Y-m-d H:i:s")); //registramos la nueva conexión en la base de datos
     $_SESSION[usuarioDAW208DBSusana2021] = $oUsuario; //guardamos en la sesión el objeto usuario
     $_SESSION[controladorEnCurso] = $aControladores['inicio']; //guardamos en la sesión el controlador que debe ejecutarse
     header('Location: index.php'); //enviamos al usuario de vuelta al index

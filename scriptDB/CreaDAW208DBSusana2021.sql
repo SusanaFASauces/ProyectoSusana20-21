@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS T01_Usuario (
     T01_Password VARCHAR(64) NOT NULL,
     T01_DescUsuario VARCHAR(255) NOT NULL,
     T01_NumAccesos INT DEFAULT 0,
-    T01_FechaHoraUltimaConexion TIMESTAMP,
+    T01_FechaHoraUltimaConexion TIMESTAMP DEFAULT NULL,
     T01_Perfil ENUM('administrador', 'usuario') DEFAULT 'usuario',
     PRIMARY KEY(T01_CodUsuario)
 )ENGINE=InnoDB;
