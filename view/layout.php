@@ -27,9 +27,12 @@
                 <a href="../proyectoDWES/indexProyectoDWES.html"><img src="webroot/icons/volver.png" alt="volver"></a>
                 <a href="https://daw208.ieslossauces.es/" target="_blank"><img src="webroot/icons/webAutor.png" alt="webAutor"></a> 
             </div>
-            <address>Contacta conmigo en: susana.fabant@educa.jcyl.es</address>
-            <p>- 27 de Febrero 2021 -</p>
+            <div>
+                <address>Contacta conmigo en: susana.fabant@educa.jcyl.es</address>
+                <p>- 27 de Febrero 2021 -</p>
+            </div>
             <div class="iconos-dcha">
+                <a href="doc/documentos/SusanaFabianAntonCV.pdf" target="_blank"><img src="webroot/icons/cv.png" alt="cv"></a>
                 <a href="doc/phpdoc/index.html" target="_blank"><img src="webroot/icons/doc.png" alt="documentacion"></a>
                 <a href="https://github.com/SusanaFASauces/ProyectoSusana20-21" target="_blank"><img src="webroot/icons/github.png" alt="github"></a>
             </div>

@@ -52,6 +52,9 @@ footer { /* ESTO SIGUE CHUNGO */
     right: 0;
     text-align: center;
     width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
     /* Colores */
     background-color: #9D8B80;
@@ -278,23 +281,15 @@ form[name="editarPerfil"] p input {
 footer address {
     margin: 10px 5px;
 }
-.iconos-dcha {
-    position: absolute;
-    top: 15px;
-    right: 25px;  
+.iconos-dcha img, .iconos-izq img{
+    margin: 0 10px;
 }
-.iconos-dcha img {
-    margin-left: 15px;
-}
-.iconos-izq {
+.iconos-izq, .iconos-dcha {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 15px;
-    left: 25px;  
 }
 .iconos-izq img {
-    margin-right: 15px;
+    /*margin-right: 15px;*/
 }
 footer img {
     width: 45px;
