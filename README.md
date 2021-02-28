@@ -6,7 +6,7 @@ del módulo Desarrollo Web Entorno Servidor
 **Autor:** Susana Fabián Antón<br>
 **Fecha de Inicio:**  20/01/2021<br>
 **Última Actualización:**  27/02/2021<br>
-**Entorno de explotación 1&1: https://daw208.ieslossauces.es/proyectoSusana20-21/index.php
+**Entorno de explotación 1&1:** https://daw208.ieslossauces.es/proyectoSusana20-21/index.php
 
 ## Funcionalidad
 - Control de acceso
