@@ -6,6 +6,7 @@ del módulo Desarrollo Web Entorno Servidor
 **Autor:** Susana Fabián Antón<br>
 **Fecha de Inicio:**  20/01/2021<br>
 **Última Actualización:**  27/02/2021<br>
+**Última Versión:** v2.4<br>
 **Entorno de explotación 1&1:** https://daw208.ieslossauces.es/proyectoSusana20-21/index.php
 
 ## Funcionalidad
@@ -21,3 +22,4 @@ del módulo Desarrollo Web Entorno Servidor
 ### Back-end
 - PHP 7.4
 - MySQL 8.0
+
