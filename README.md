@@ -22,4 +22,3 @@ del módulo Desarrollo Web Entorno Servidor
 ### Back-end
 - PHP 7.4
 - MySQL 8.0
-
