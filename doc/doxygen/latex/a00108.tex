@@ -1,0 +1,427 @@
+\hypertarget{a00108}{}\doxysection{Referencia de la Clase validacion\+Formularios}
+\label{a00108}\index{validacionFormularios@{validacionFormularios}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{a00108_aea57853b69e9f11c8a6fe0967e09348f}{comprobar\+Alfabetico}} (\$cadena, \$max\+Tamanio=1000, \$min\+Tamanio=1, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_a9cec4205d93c48bb5ef51bb5a7ccad22}{comprobar\+Alfa\+Numerico}} (\$cadena, \$max\+Tamanio=1000, \$min\+Tamanio=1, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_aa6ea0126c71ac63a4f330bc78e808975}{comprobar\+Entero}} (\$integer, \$max=PHP\+\_\+\+INT\+\_\+\+MAX, \$min=-\/PHP\+\_\+\+INT\+\_\+\+MAX, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_afe5a1720a0c252f9c2b493f16175ea5c}{comprobar\+Float}} (\$float, \$max=PHP\+\_\+\+FLOAT\+\_\+\+MAX, \$min=-\/PHP\+\_\+\+FLOAT\+\_\+\+MAX, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_a631fc4952fe300300173eb5cdaaa1868}{validar\+Email}} (\$email, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_aed5f622812dec4069aaf35b5d8247a25}{validar\+URL}} (\$url, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_ab4641ed6cc37b66c56c36363197e7743}{validar\+Fecha}} (\$fecha, \$fecha\+Maxima=\textquotesingle{}01/01/2200\textquotesingle{}, \$fecha\+Minima=\char`\"{}01/01/1900\char`\"{}, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_a1fe73429d216aa57bfdce69e5920294e}{validar\+Dni}} (\$dni, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_ac2b6ff7cb10eff8ac14a92b6541058ff}{validar\+Cp}} (\$cp, \$obligatorio=0)
+\item 
+static \mbox{\hyperlink{a00108_af487c571a7b5832ce18d00af44672cad}{validar\+Password}} (\$passwd, \$maximo=16, \$minimo=2, \$tipo=3, \$obligatorio=1)
+\item 
+static \mbox{\hyperlink{a00108_a0dff9658b09504bc020d0be6478fd997}{comprobar\+No\+Vacio}} (\$cadena)
+\item 
+static \mbox{\hyperlink{a00108_a5701da174450e7c521ba7a38fbd21939}{comprobar\+Max\+Tamanio}} (\$cadena, \$tamanio)
+\item 
+static \mbox{\hyperlink{a00108_aeb1e0298e77ea4ba53b61cb3c6f3bd3c}{comprobar\+Min\+Tamanio}} (\$cadena, \$tamanio)
+\item 
+static \mbox{\hyperlink{a00108_ac062142050452a39309e2adb87ce5683}{validar\+Elemento\+En\+Lista}} (\$elemento\+Elegido, \$a\+Opciones)
+\item 
+static \mbox{\hyperlink{a00108_a78ea2a1a8fc78db8f1d29bfbd7690dc9}{valida\+Telefono}} (\$tel, \$obligatorio=0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{a00108_aea57853b69e9f11c8a6fe0967e09348f}\label{a00108_aea57853b69e9f11c8a6fe0967e09348f}} 
+\index{validacionFormularios@{validacionFormularios}!comprobarAlfabetico@{comprobarAlfabetico}}
+\index{comprobarAlfabetico@{comprobarAlfabetico}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{comprobarAlfabetico()}{comprobarAlfabetico()}}
+{\footnotesize\ttfamily static comprobar\+Alfabetico (\begin{DoxyParamCaption}\item[{}]{\$cadena,  }\item[{}]{\$max\+Tamanio = {\ttfamily 1000},  }\item[{}]{\$min\+Tamanio = {\ttfamily 1},  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_aea57853b69e9f11c8a6fe0967e09348f}{comprobar\+Alfabetico()}}; \begin{DoxyAuthor}{Autor}
+Adrián Cando Oviedo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+0 He eliminado todos los if innecesrios que había simplificandolo a llamar a las funciones internas de errores que devuelven un error si le hay concatenando esos errores en una cadena. Y comprobando que está vacío siempre que sea obligatorio. He añadido algunos comentarios explicando los nuevos cambios. 
+\end{DoxyVersion}
+\begin{DoxySince}{Desde}
+2018-\/10-\/23 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$cadena} & Cadena que se va a comprobar. \\
+\hline
+{\em \$max\+Tamanio} & Tamaño máximo de la cádena. \\
+\hline
+{\em \$min\+Tamanio} & Tamaño mínimo de la cadena. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null -\/$>$ Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco \$mensaje\+Error -\/$>$ Que contiene una cadena con los errores que han surgido concatenados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_a9cec4205d93c48bb5ef51bb5a7ccad22}\label{a00108_a9cec4205d93c48bb5ef51bb5a7ccad22}} 
+\index{validacionFormularios@{validacionFormularios}!comprobarAlfaNumerico@{comprobarAlfaNumerico}}
+\index{comprobarAlfaNumerico@{comprobarAlfaNumerico}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{comprobarAlfaNumerico()}{comprobarAlfaNumerico()}}
+{\footnotesize\ttfamily static comprobar\+Alfa\+Numerico (\begin{DoxyParamCaption}\item[{}]{\$cadena,  }\item[{}]{\$max\+Tamanio = {\ttfamily 1000},  }\item[{}]{\$min\+Tamanio = {\ttfamily 1},  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_a9cec4205d93c48bb5ef51bb5a7ccad22}{comprobar\+Alfa\+Numerico()}}; ~\newline
+ \begin{DoxyAuthor}{Autor}
+Adrián Cando Oviedo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+0 He eliminado todos los if innecesrios que había simplificandolo a llamar a las funciones internas de errores que devuelven un error si le hay concatenando esos errores en una cadena. Y comprobando que está vacío siempre que sea obligatorio. He añadido algunos comentarios explicando los nuevos cambios. 
+\end{DoxyVersion}
+\begin{DoxySince}{Desde}
+2018-\/10-\/23 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$cadena} & Cadena que se va a comprobar. \\
+\hline
+{\em \$max\+Tamanio} & Tamaño máximo de la cádena. \\
+\hline
+{\em \$min\+Tamanio} & Tamaño mínimo de la cadena. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null -\/$>$ Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco \$mensaje\+Error -\/$>$ Que contiene una cadena con los errores que han surgido concatenados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_aa6ea0126c71ac63a4f330bc78e808975}\label{a00108_aa6ea0126c71ac63a4f330bc78e808975}} 
+\index{validacionFormularios@{validacionFormularios}!comprobarEntero@{comprobarEntero}}
+\index{comprobarEntero@{comprobarEntero}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{comprobarEntero()}{comprobarEntero()}}
+{\footnotesize\ttfamily static comprobar\+Entero (\begin{DoxyParamCaption}\item[{}]{\$integer,  }\item[{}]{\$max = {\ttfamily PHP\+\_\+INT\+\_\+MAX},  }\item[{}]{\$min = {\ttfamily -\/PHP\+\_\+INT\+\_\+MAX},  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyAuthor}{Autor}
+Javier Nieto y Cristina Núñez @function \mbox{\hyperlink{a00108_aa6ea0126c71ac63a4f330bc78e808975}{comprobar\+Entero()}}; 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$integer} & Número entero a comprobar \\
+\hline
+{\em \$max} & Valor máximo del entero \\
+\hline
+{\em \$min} & Valor mínimo del entero \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null en el caso en el que esté correcto, si no devuelve una cadena con el mensaje de error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_afe5a1720a0c252f9c2b493f16175ea5c}\label{a00108_afe5a1720a0c252f9c2b493f16175ea5c}} 
+\index{validacionFormularios@{validacionFormularios}!comprobarFloat@{comprobarFloat}}
+\index{comprobarFloat@{comprobarFloat}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{comprobarFloat()}{comprobarFloat()}}
+{\footnotesize\ttfamily static comprobar\+Float (\begin{DoxyParamCaption}\item[{}]{\$float,  }\item[{}]{\$max = {\ttfamily PHP\+\_\+FLOAT\+\_\+MAX},  }\item[{}]{\$min = {\ttfamily -\/PHP\+\_\+FLOAT\+\_\+MAX},  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyAuthor}{Autor}
+Javier Nieto y Cristina Núñez @function \mbox{\hyperlink{a00108_afe5a1720a0c252f9c2b493f16175ea5c}{comprobar\+Float()}}; 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$float} & Número entero a comprobar \\
+\hline
+{\em \$max} & Valor máximo del entero \\
+\hline
+{\em \$min} & Valor mínimo del entero \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null en el caso en el que esté correcto, si no devuelve una cadena con el mensaje de error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_a5701da174450e7c521ba7a38fbd21939}\label{a00108_a5701da174450e7c521ba7a38fbd21939}} 
+\index{validacionFormularios@{validacionFormularios}!comprobarMaxTamanio@{comprobarMaxTamanio}}
+\index{comprobarMaxTamanio@{comprobarMaxTamanio}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{comprobarMaxTamanio()}{comprobarMaxTamanio()}}
+{\footnotesize\ttfamily static comprobar\+Max\+Tamanio (\begin{DoxyParamCaption}\item[{}]{\$cadena,  }\item[{}]{\$tamanio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_a5701da174450e7c521ba7a38fbd21939}{comprobar\+Max\+Tamanio()}}; \begin{DoxyAuthor}{Autor}
+Adrián Cando Oviedo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+3 Pequeño cambio a la hora de la devolución. Antes devolvía un valor boolean, ahora una cadena con el error o sin él 
+\end{DoxyVersion}
+\begin{DoxySince}{Desde}
+2018-\/10-\/23 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$cadena} & Cadena para comprobar \\
+\hline
+{\em \$tamanio} & Longitud de la cadena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null -\/$>$ Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco \$mensaje\+Error -\/$>$ Que contiene una cadena con los errores que han surgido concatenados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_aeb1e0298e77ea4ba53b61cb3c6f3bd3c}\label{a00108_aeb1e0298e77ea4ba53b61cb3c6f3bd3c}} 
+\index{validacionFormularios@{validacionFormularios}!comprobarMinTamanio@{comprobarMinTamanio}}
+\index{comprobarMinTamanio@{comprobarMinTamanio}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{comprobarMinTamanio()}{comprobarMinTamanio()}}
+{\footnotesize\ttfamily static comprobar\+Min\+Tamanio (\begin{DoxyParamCaption}\item[{}]{\$cadena,  }\item[{}]{\$tamanio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_aeb1e0298e77ea4ba53b61cb3c6f3bd3c}{comprobar\+Min\+Tamanio()}}; \begin{DoxyAuthor}{Autor}
+Adrián Cando Oviedo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+3 Pequeño cambio a la hora de la devolución. Antes devolvía un valor boolean, ahora una cadena con el error o sin él 
+\end{DoxyVersion}
+\begin{DoxySince}{Desde}
+2018-\/10-\/23 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$cadena} & Cadena para comprobar \\
+\hline
+{\em \$tamanio} & Longitud de la cadena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null -\/$>$ Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco \$mensaje\+Error -\/$>$ Que contiene una cadena con los errores que han surgido concatenados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_a0dff9658b09504bc020d0be6478fd997}\label{a00108_a0dff9658b09504bc020d0be6478fd997}} 
+\index{validacionFormularios@{validacionFormularios}!comprobarNoVacio@{comprobarNoVacio}}
+\index{comprobarNoVacio@{comprobarNoVacio}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{comprobarNoVacio()}{comprobarNoVacio()}}
+{\footnotesize\ttfamily static comprobar\+No\+Vacio (\begin{DoxyParamCaption}\item[{}]{\$cadena }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_a0dff9658b09504bc020d0be6478fd997}{comprobar\+No\+Vacio()}}; \begin{DoxyAuthor}{Autor}
+Adrián Cando Oviedo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+3 Pequeño cambio a la hora de la devolución. Antes devolvía un valor boolean, ahora una cadena con el error o sin él 
+\end{DoxyVersion}
+\begin{DoxySince}{Desde}
+2018-\/10-\/23 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$cadena} & Cadena a comprobar que no está vacía. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null -\/$>$ Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco \$mensaje\+Error -\/$>$ Que contiene una cadena con los errores que han surgido concatenados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_ac2b6ff7cb10eff8ac14a92b6541058ff}\label{a00108_ac2b6ff7cb10eff8ac14a92b6541058ff}} 
+\index{validacionFormularios@{validacionFormularios}!validarCp@{validarCp}}
+\index{validarCp@{validarCp}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validarCp()}{validarCp()}}
+{\footnotesize\ttfamily static validar\+Cp (\begin{DoxyParamCaption}\item[{}]{\$cp,  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_ac2b6ff7cb10eff8ac14a92b6541058ff}{validar\+Cp()}}; \begin{DoxyAuthor}{Autor}
+Mario Casquero Jañez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$cp} & cadena a comprobar. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null si es correcto o un mensaje de error en caso de que lo haya. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_a1fe73429d216aa57bfdce69e5920294e}\label{a00108_a1fe73429d216aa57bfdce69e5920294e}} 
+\index{validacionFormularios@{validacionFormularios}!validarDni@{validarDni}}
+\index{validarDni@{validarDni}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validarDni()}{validarDni()}}
+{\footnotesize\ttfamily static validar\+Dni (\begin{DoxyParamCaption}\item[{}]{\$dni,  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_a1fe73429d216aa57bfdce69e5920294e}{validar\+Dni()}};
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \$dni} & cadena a comprobar. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null si es correcto o un mensaje de error en caso de que lo haya. Si no es obligatorio, da por válido un campo vacío o un DNI, si lo es, será necesario introducir un DNI bien formateado @function \mbox{\hyperlink{a00108_a1fe73429d216aa57bfdce69e5920294e}{validar\+Dni()}}; 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Autor}
+Mario Casquero Jañez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$dni} & cadena a comprobar. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null si es correcto o un mensaje de error en caso de que lo haya. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_ac062142050452a39309e2adb87ce5683}\label{a00108_ac062142050452a39309e2adb87ce5683}} 
+\index{validacionFormularios@{validacionFormularios}!validarElementoEnLista@{validarElementoEnLista}}
+\index{validarElementoEnLista@{validarElementoEnLista}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validarElementoEnLista()}{validarElementoEnLista()}}
+{\footnotesize\ttfamily static validar\+Elemento\+En\+Lista (\begin{DoxyParamCaption}\item[{}]{\$elemento\+Elegido,  }\item[{}]{\$a\+Opciones }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function validate\+Fecha();
+
+
+\begin{DoxyParams}[1]{Parámetros}
+ & {\em \$date} & Fecha a comprobar \\
+\hline
+string & {\em \$format} & formato de la cadena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+bool Devuelve null si es correcto, y si no devuelve un error 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Autor}
+Christian Muñiz de la Huerga @function \mbox{\hyperlink{a00108_ac062142050452a39309e2adb87ce5683}{validar\+Elemento\+En\+Lista()}}; 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$elemento\+Elegido} & Elemento introducido que se va a comprobar. \\
+\hline
+{\em \$a\+Opciones} & Array con los posibles valores posibles con el que se va a comparar el elemento. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null en el caso en el que esté correcto, sino devuelve una cadena con el mensaje de error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_a631fc4952fe300300173eb5cdaaa1868}\label{a00108_a631fc4952fe300300173eb5cdaaa1868}} 
+\index{validacionFormularios@{validacionFormularios}!validarEmail@{validarEmail}}
+\index{validarEmail@{validarEmail}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validarEmail()}{validarEmail()}}
+{\footnotesize\ttfamily static validar\+Email (\begin{DoxyParamCaption}\item[{}]{\$email,  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_a631fc4952fe300300173eb5cdaaa1868}{validar\+Email()}}; \begin{DoxyAuthor}{Autor}
+Adrián Cando Oviedo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+3 He modificado el tratamiento de los mensajes de error, y las comprobaciones, adaptadas a la nueva forma de los mensajes. He eliminado los if innecesarios He añadido nuevos comentarios explicando el nuevo funcionamiento. 
+\end{DoxyVersion}
+\begin{DoxySince}{Desde}
+2018-\/10-\/23 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$email} & Cadena a comprobar. \\
+\hline
+{\em \$max\+Tamanio} & Tamaño máximo de la cadena. \\
+\hline
+{\em \$min\+Tamanio} & Tamaño mínimo de la cadena. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null -\/$>$ Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco \$mensaje\+Error -\/$>$ Que contiene una cadena con los errores que han surgido concatenados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_ab4641ed6cc37b66c56c36363197e7743}\label{a00108_ab4641ed6cc37b66c56c36363197e7743}} 
+\index{validacionFormularios@{validacionFormularios}!validarFecha@{validarFecha}}
+\index{validarFecha@{validarFecha}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validarFecha()}{validarFecha()}}
+{\footnotesize\ttfamily static validar\+Fecha (\begin{DoxyParamCaption}\item[{}]{\$fecha,  }\item[{}]{\$fecha\+Maxima = {\ttfamily \textquotesingle{}01/01/2200\textquotesingle{}},  }\item[{}]{\$fecha\+Minima = {\ttfamily \char`\"{}01/01/1900\char`\"{}},  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_ab4641ed6cc37b66c56c36363197e7743}{validar\+Fecha()}}; 
+\begin{DoxyParams}{Parámetros}
+{\em \$fecha} & Cadena a comprobar. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null si es correcto o un mensaje de error en caso de que lo haya. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_af487c571a7b5832ce18d00af44672cad}\label{a00108_af487c571a7b5832ce18d00af44672cad}} 
+\index{validacionFormularios@{validacionFormularios}!validarPassword@{validarPassword}}
+\index{validarPassword@{validarPassword}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validarPassword()}{validarPassword()}}
+{\footnotesize\ttfamily static validar\+Password (\begin{DoxyParamCaption}\item[{}]{\$passwd,  }\item[{}]{\$maximo = {\ttfamily 16},  }\item[{}]{\$minimo = {\ttfamily 2},  }\item[{}]{\$tipo = {\ttfamily 3},  }\item[{}]{\$obligatorio = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_af487c571a7b5832ce18d00af44672cad}{validar\+Password()}}; \begin{DoxyAuthor}{Autor}
+Javier Nieto y Cristina Núñez 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+30/11/2020 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$passwd} & cadena a comprobar. \\
+\hline
+{\em \$maximo} & valor que indica la longitud máxima de la contraseña \\
+\hline
+{\em \$minimo} & valor que indica la longitud mínima de la contraseña \\
+\hline
+{\em \$tipo} & valor que el tipo de la contraseña, su complejidad, siendo 1 si admite solo letras, 2 si admite numeros y letras y 3 si contiene al menos una letra mayúscula y un número \\
+\hline
+{\em \$obligatorio} & valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null si es correcto o un mensaje de error en caso de que lo haya. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_aed5f622812dec4069aaf35b5d8247a25}\label{a00108_aed5f622812dec4069aaf35b5d8247a25}} 
+\index{validacionFormularios@{validacionFormularios}!validarURL@{validarURL}}
+\index{validarURL@{validarURL}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validarURL()}{validarURL()}}
+{\footnotesize\ttfamily static validar\+URL (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_aed5f622812dec4069aaf35b5d8247a25}{validar\+URL()}}; \begin{DoxyAuthor}{Autor}
+Christian Muñiz de la Huerga 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$url} & Cadena a comprobar. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null$\vert$string Devuelve null si es correcto o un mensaje de error en caso de que lo haya. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00108_a78ea2a1a8fc78db8f1d29bfbd7690dc9}\label{a00108_a78ea2a1a8fc78db8f1d29bfbd7690dc9}} 
+\index{validacionFormularios@{validacionFormularios}!validaTelefono@{validaTelefono}}
+\index{validaTelefono@{validaTelefono}!validacionFormularios@{validacionFormularios}}
+\doxysubsubsection{\texorpdfstring{validaTelefono()}{validaTelefono()}}
+{\footnotesize\ttfamily static valida\+Telefono (\begin{DoxyParamCaption}\item[{}]{\$tel,  }\item[{}]{\$obligatorio = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@function \mbox{\hyperlink{a00108_a78ea2a1a8fc78db8f1d29bfbd7690dc9}{valida\+Telefono()}}; \begin{DoxyAuthor}{Autor}
+Tania Mateos 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+3 Modificada la comprobación de si está vacio. Modificada la devolución de la función, ahora devuelve nada o un mensaje de error. 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parámetros}
+{\em \$tel} & Telefono que se va a comprobar. \\
+\hline
+{\em \$obligatorio} & Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+null -\/$>$ Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco \$mensaje\+Error -\/$>$ Que contiene una cadena con los errores que han surgido concatenados. 
+\end{DoxyReturn}
+\begin{DoxySince}{Desde}
+2020-\/10-\/19 
+\end{DoxySince}
+\begin{DoxyAuthor}{Autor}
+Luis Puente Fernández 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+4 Corregido la variable en la que se almacena el mensaje de error en caso de estar vacio la cual era distinta a la que se devolvía, tambien se ha cambiado el nombre de la variable mensaje a mensaje\+Error, que es mas descriptivo 
+\end{DoxyVersion}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Fabi\+Anton/\+Documents/\+CFGSDesarrollode\+Aplicaciones\+Web/\+Segundo\+Ano/\+Proyectos\+Net\+Beans/proyecto\+CFGSDAW/proyecto\+Susana20-\/21/core/201130libreria\+Validacion.\+php\end{DoxyCompactItemize}

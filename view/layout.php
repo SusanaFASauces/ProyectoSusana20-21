@@ -25,6 +25,7 @@
         <footer>
             <div class="iconos-izq">
                 <a href="../proyectoDWES/indexProyectoDWES.html"><img src="webroot/icons/volver.png" alt="volver"></a>
+                <a href="doc/documentos/SusanaFabianAntonCV.pdf" target="_blank"><img src="webroot/icons/cv.png" alt="cv"></a>
                 <a href="https://daw208.ieslossauces.es/" target="_blank"><img src="webroot/icons/webAutor.png" alt="webAutor"></a> 
             </div>
             <div>
@@ -32,8 +33,8 @@
                 <p>- 27 de Febrero 2021 -</p>
             </div>
             <div class="iconos-dcha">
-                <a href="doc/documentos/SusanaFabianAntonCV.pdf" target="_blank"><img src="webroot/icons/cv.png" alt="cv"></a>
-                <a href="doc/phpdoc/index.html" target="_blank"><img src="webroot/icons/doc.png" alt="documentacion"></a>
+                <a href="doc/doxygen/html/index.html" target="_blank"><img src="webroot/icons/doxygen.png" alt="doxygen"></a>
+                <a href="doc/phpdoc/index.html" target="_blank"><img src="webroot/icons/doc.png" alt="phpdoc"></a>
                 <a href="https://github.com/SusanaFASauces/ProyectoSusana20-21" target="_blank"><img src="webroot/icons/github.png" alt="github"></a>
             </div>
         </footer>

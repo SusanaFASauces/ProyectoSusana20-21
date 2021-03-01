@@ -1,0 +1,83 @@
+\hypertarget{a00124}{}\doxysection{Referencia de la Clase REST}
+\label{a00124}\index{REST@{REST}}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{a00124_a5f5849ef35f033afd73607202706ccf6}{sevicio\+APOD}} (\$fecha)
+\item 
+static \mbox{\hyperlink{a00124_ae43a0d83642a8b21692f4bba945bd0f7}{sevicio\+OMDb}} (\$titulo)
+\item 
+static \mbox{\hyperlink{a00124_a888e956603d18f898a563695fb6c1bbf}{servicio\+Conversor}} (\$cifra, \$ud\+Inicial, \$ud\+Final)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+Susana Fabián Antón 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+26/01/2021 
+\end{DoxySince}
+\begin{DoxyVersion}{Versión}
+08/02/2021 
+\end{DoxyVersion}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{a00124_a888e956603d18f898a563695fb6c1bbf}\label{a00124_a888e956603d18f898a563695fb6c1bbf}} 
+\index{REST@{REST}!servicioConversor@{servicioConversor}}
+\index{servicioConversor@{servicioConversor}!REST@{REST}}
+\doxysubsubsection{\texorpdfstring{servicioConversor()}{servicioConversor()}}
+{\footnotesize\ttfamily static servicio\+Conversor (\begin{DoxyParamCaption}\item[{}]{\$cifra,  }\item[{}]{\$ud\+Inicial,  }\item[{}]{\$ud\+Final }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Llama al servicio API \mbox{\hyperlink{a00124}{REST}} Conversor de Unidades, que convierte los datos recibidos a las unidades solicitadas.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$cifra} & la cifra que queremos convertir. \\
+\hline
+type & {\em \$ud\+Inicial} & la unidad en la que se encuentra esa cifra. \\
+\hline
+type & {\em \$ud\+Final} & la unidad a la que queremos convertir esta cifra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+type array que contiene información sobre la conversión que se ha realizado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00124_a5f5849ef35f033afd73607202706ccf6}\label{a00124_a5f5849ef35f033afd73607202706ccf6}} 
+\index{REST@{REST}!sevicioAPOD@{sevicioAPOD}}
+\index{sevicioAPOD@{sevicioAPOD}!REST@{REST}}
+\doxysubsubsection{\texorpdfstring{sevicioAPOD()}{sevicioAPOD()}}
+{\footnotesize\ttfamily static sevicio\+APOD (\begin{DoxyParamCaption}\item[{}]{\$fecha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Llama al servicio API \mbox{\hyperlink{a00124}{REST}} APOD(\+Astronomy Picture of the Day), que nos devuelve la imagen atronómica del día e información relativa a esta.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$fecha} & la fecha que le vamos a pasar al servicio para que busque una imagen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+type array que contiene información sobre la imagen astronómica del día. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00124_ae43a0d83642a8b21692f4bba945bd0f7}\label{a00124_ae43a0d83642a8b21692f4bba945bd0f7}} 
+\index{REST@{REST}!sevicioOMDb@{sevicioOMDb}}
+\index{sevicioOMDb@{sevicioOMDb}!REST@{REST}}
+\doxysubsubsection{\texorpdfstring{sevicioOMDb()}{sevicioOMDb()}}
+{\footnotesize\ttfamily static sevicio\+OMDb (\begin{DoxyParamCaption}\item[{}]{\$titulo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Llama al servicio API \mbox{\hyperlink{a00124}{REST}} OMdb(\+Open Movie Database), que nos devuelve información sobre películas.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$titulo} & el título de la película que queremos buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+type array que contiene información sobre la película que le hemos pasado como parámetro. 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Fabi\+Anton/\+Documents/\+CFGSDesarrollode\+Aplicaciones\+Web/\+Segundo\+Ano/\+Proyectos\+Net\+Beans/proyecto\+CFGSDAW/proyecto\+Susana20-\/21/model/REST.\+php\end{DoxyCompactItemize}

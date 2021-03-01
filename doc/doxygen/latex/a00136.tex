@@ -1,0 +1,153 @@
+\hypertarget{a00136}{}\doxysection{Referencia de la Clase Usuario\+PDO}
+\label{a00136}\index{UsuarioPDO@{UsuarioPDO}}
+Diagrama de herencias de Usuario\+PDO\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00136}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{a00136_ae85b032587e9e5fa8844d0431f32578e}{validar\+Usuario}} (\$cod\+Usuario, \$password)
+\item 
+static \mbox{\hyperlink{a00136_a52fa586fecf82d3f4df7ff5dac39afc8}{validar\+Cod\+No\+Existe}} (\$cod\+Usuario)
+\item 
+static \mbox{\hyperlink{a00136_a08ac87d1460035ef6d0ce58b56273e0a}{alta\+Usuario}} (\$cod\+Usuario, \$desc\+Usuario, \$password)
+\item 
+static \mbox{\hyperlink{a00136_a9c5e0c660fe8ab2912e67d173a6e1a36}{modificar\+Usuario}} (\$cod\+Usuario, \$new\+Desc\+Usuario)
+\item 
+static \mbox{\hyperlink{a00136_ac08be54eb31f194fb1bdd1457a2c008e}{borrar\+Usuario}} (\$cod\+Usuario)
+\item 
+static \mbox{\hyperlink{a00136_ab45276b098688c181403f93140157fad}{registrar\+Ultima\+Conexion}} (\$cod\+Usuario, \$fecha\+Conexion)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+Susana Fabián Antón 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+20/01/2021 
+\end{DoxySince}
+\begin{DoxyVersion}{Versión}
+27/01/2021 
+\end{DoxyVersion}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{a00136_a08ac87d1460035ef6d0ce58b56273e0a}\label{a00136_a08ac87d1460035ef6d0ce58b56273e0a}} 
+\index{UsuarioPDO@{UsuarioPDO}!altaUsuario@{altaUsuario}}
+\index{altaUsuario@{altaUsuario}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{altaUsuario()}{altaUsuario()}}
+{\footnotesize\ttfamily static alta\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$cod\+Usuario,  }\item[{}]{\$desc\+Usuario,  }\item[{}]{\$password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Añade un nuevo usuario a la base de datos. Si el alta se realiza correctamente, devuelve una instancia del \mbox{\hyperlink{a00128}{Usuario}} añadido.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$cod\+Usuario} & el código del usuario que vamos a dar de alta. \\
+\hline
+type & {\em \$desc\+Usuario} & la descripción del usuario que vamos a dar de alta. \\
+\hline
+type & {\em \$password} & la contraseña del usuario que vamos a dar de alta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\textbackslash{}\+Usuario instancia de \mbox{\hyperlink{a00128}{Usuario}} con los datos del usuario que hemos
+\end{DoxyReturn}
+añadido a la base de datos. Si no se pudiera dar de alta al usuario, devolverá null. \mbox{\Hypertarget{a00136_ac08be54eb31f194fb1bdd1457a2c008e}\label{a00136_ac08be54eb31f194fb1bdd1457a2c008e}} 
+\index{UsuarioPDO@{UsuarioPDO}!borrarUsuario@{borrarUsuario}}
+\index{borrarUsuario@{borrarUsuario}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{borrarUsuario()}{borrarUsuario()}}
+{\footnotesize\ttfamily static borrar\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$cod\+Usuario }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Borra de la base de datos el usuario cuyo código coincida con el recibido como parámetro.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$cod\+Usuario} & el código del usuario que queremos borrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+boolean true si el usuario se ha borrado correctamente, o false en el caso contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00136_a9c5e0c660fe8ab2912e67d173a6e1a36}\label{a00136_a9c5e0c660fe8ab2912e67d173a6e1a36}} 
+\index{UsuarioPDO@{UsuarioPDO}!modificarUsuario@{modificarUsuario}}
+\index{modificarUsuario@{modificarUsuario}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{modificarUsuario()}{modificarUsuario()}}
+{\footnotesize\ttfamily static modificar\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$cod\+Usuario,  }\item[{}]{\$new\+Desc\+Usuario }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Modifica los datos de un usuario en la base de datos. Si la modificación se realiza correctamente, devuelve una instancia de \mbox{\hyperlink{a00128}{Usuario}} con los datos modificados.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$cod\+Usuario} & el código del usuario que se desea modificar \\
+\hline
+type & {\em \$new\+Desc\+Usuario} & la nueva descripción del usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\textbackslash{}\+Usuario instancia de \mbox{\hyperlink{a00128}{Usuario}} con los datos del usuario que hemos modificado. Si no se pudiera realizar la modificación, devolverá null. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00136_ab45276b098688c181403f93140157fad}\label{a00136_ab45276b098688c181403f93140157fad}} 
+\index{UsuarioPDO@{UsuarioPDO}!registrarUltimaConexion@{registrarUltimaConexion}}
+\index{registrarUltimaConexion@{registrarUltimaConexion}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{registrarUltimaConexion()}{registrarUltimaConexion()}}
+{\footnotesize\ttfamily static registrar\+Ultima\+Conexion (\begin{DoxyParamCaption}\item[{}]{\$cod\+Usuario,  }\item[{}]{\$fecha\+Conexion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registra en la base de datos la fecha de útima conexión del usuario recibido como parámetro y actualiza el número de accesos.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$cod\+Usuario} & el código del usuario que queremos actualizar. \\
+\hline
+type & {\em \$fecha\+Conexion} & la nueva fecha de conexión del usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\textbackslash{}\+Usuario instancia de \mbox{\hyperlink{a00128}{Usuario}} con los datos del usuario que hemos modificado. Si no se pudiera realizar la modificación, devolverá null. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00136_a52fa586fecf82d3f4df7ff5dac39afc8}\label{a00136_a52fa586fecf82d3f4df7ff5dac39afc8}} 
+\index{UsuarioPDO@{UsuarioPDO}!validarCodNoExiste@{validarCodNoExiste}}
+\index{validarCodNoExiste@{validarCodNoExiste}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{validarCodNoExiste()}{validarCodNoExiste()}}
+{\footnotesize\ttfamily static validar\+Cod\+No\+Existe (\begin{DoxyParamCaption}\item[{}]{\$cod\+Usuario }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Comprueba si existe o no un usuario en la base de datos con el código de usuario recibido como parámetro.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$cod\+Usuario} & el código de usuario que queremos comprobar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+boolean true si no existe ningún usuario que utilice ese código, o false en el caso contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00136_ae85b032587e9e5fa8844d0431f32578e}\label{a00136_ae85b032587e9e5fa8844d0431f32578e}} 
+\index{UsuarioPDO@{UsuarioPDO}!validarUsuario@{validarUsuario}}
+\index{validarUsuario@{validarUsuario}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{validarUsuario()}{validarUsuario()}}
+{\footnotesize\ttfamily static validar\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$cod\+Usuario,  }\item[{}]{\$password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Comprueba en la base de datos que exista un usuario cuyas credenciales coincidan con los datos pasados como parámetro. Si existe, devuelve sus datos.
+
+
+\begin{DoxyParams}[1]{Parámetros}
+type & {\em \$cod\+Usuario} & el código del usuario que deseamos validar. \\
+\hline
+type & {\em \$password} & la contraseña del usuario que deseamos validar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\textbackslash{}\+Usuario variable que contendrá una instancia de \mbox{\hyperlink{a00128}{Usuario}} con datos del usuario que deseamos validar. Si no existe un usuario con esas credenciales, devolverá null. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{a00132}{Usuario\+DB}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Fabi\+Anton/\+Documents/\+CFGSDesarrollode\+Aplicaciones\+Web/\+Segundo\+Ano/\+Proyectos\+Net\+Beans/proyecto\+CFGSDAW/proyecto\+Susana20-\/21/model/Usuario\+PDO.\+php\end{DoxyCompactItemize}
