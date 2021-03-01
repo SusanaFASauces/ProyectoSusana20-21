@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>proyectoSusana20-21</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="phpdoc">
+    <base href="../">
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
@@ -132,7 +132,7 @@
                     <span class="phpdocumentor-tag__name">version</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">20/01/2021</span>
+                                            <span class="phpdocumentor-tag-link">27/01/2021</span>
                                                                                 
                                                  <section class="phpdocumentor-description"></section>
 
@@ -185,6 +185,14 @@ una instancia del Usuario añadido.</dd>
 una instancia de Usuario con los datos modificados.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/UsuarioPDO.html#method_registrarUltimaConexion">registrarUltimaConexion()</a>
+    <span>
+                        &nbsp;: <a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a>    </span>
+</dt>
+<dd>Registra en la base de datos la fecha de útima conexión del usuario recibido como parámetro y
+actualiza el número de accesos.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/UsuarioPDO.html#method_validarCodNoExiste">validarCodNoExiste()</a>
     <span>
                         &nbsp;: bool    </span>
@@ -198,6 +206,13 @@ una instancia de Usuario con los datos modificados.</dd>
 </dt>
 <dd>Comprueba en la base de datos que exista un usuario cuyas credenciales coincidan con los datos pasados
 como parámetro. Si existe, devuelve sus datos.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/UsuarioPDO.html#method_buscarUsuario">buscarUsuario()</a>
+    <span>
+                        &nbsp;: <a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a>    </span>
+</dt>
+<dd>Busca en la base de datos un usuario cuyo código coincida con el recibido como parámetro.</dd>
 
         </dl>
 
@@ -225,7 +240,7 @@ como parámetro. Si existe, devuelve sus datos.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/UsuarioPDO.php"><a href="files/model-usuariopdo.html"><abbr title="model/UsuarioPDO.php">UsuarioPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
         <p class="phpdocumentor-summary">Añade un nuevo usuario a la base de datos. Si el alta se realiza correctamente, devuelve
@@ -273,8 +288,8 @@ una instancia del Usuario añadido.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type"><a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a></span>
             &mdash;
-            <section class="phpdocumentor-description"><p>variable que contendrá un instancia de Usuario con los datos del usuario que hemos
-añadido a la base de datos. Si no se pudiera dar de alta al usuario, devolverá null.</p>
+            <section class="phpdocumentor-description"><p>instancia de Usuario con los datos del usuario que hemos</p>
+<p>añadido a la base de datos. Si no se pudiera dar de alta al usuario, devolverá null.</p>
 </section>
 
     
@@ -292,7 +307,7 @@ añadido a la base de datos. Si no se pudiera dar de alta al usuario, devolverá
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/UsuarioPDO.php"><a href="files/model-usuariopdo.html"><abbr title="model/UsuarioPDO.php">UsuarioPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">104</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 </aside>
 
         <p class="phpdocumentor-summary">Borra de la base de datos el usuario cuyo código coincida con el recibido como parámetro.</p>
@@ -339,7 +354,7 @@ añadido a la base de datos. Si no se pudiera dar de alta al usuario, devolverá
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="model/UsuarioPDO.php"><a href="files/model-usuariopdo.html"><abbr title="model/UsuarioPDO.php">UsuarioPDO.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 </aside>
 
         <p class="phpdocumentor-summary">Modifica los datos de un usuario en la base de datos. Si la modificación se realiza correctamente, devuelve
@@ -378,8 +393,66 @@ una instancia de Usuario con los datos modificados.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type"><a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a></span>
             &mdash;
-            <section class="phpdocumentor-description"><p>variable que contendrá un instancia de Usuario con los datos del usuario que hemos
-modificado. Si no se pudiera realizar la modificación, devolverá null.</p>
+            <section class="phpdocumentor-description"><p>instancia de Usuario con los datos del usuario que hemos modificado.
+Si no se pudiera realizar la modificación, devolverá null.</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_registrarUltimaConexion">
+        registrarUltimaConexion()
+        <a href="classes/UsuarioPDO.html#method_registrarUltimaConexion" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="model/UsuarioPDO.php"><a href="files/model-usuariopdo.html"><abbr title="model/UsuarioPDO.php">UsuarioPDO.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">126</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Registra en la base de datos la fecha de útima conexión del usuario recibido como parámetro y
+actualiza el número de accesos.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">registrarUltimaConexion</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\type">type</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$codUsuario</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\type">type</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fechaConexion</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$codUsuario</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\type">type</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>el código del usuario que queremos actualizar.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$fechaConexion</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\type">type</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>la nueva fecha de conexión del usuario</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>instancia de Usuario con los datos del usuario que hemos modificado.
+Si no se pudiera realizar la modificación, devolverá null.</p>
 </section>
 
     
@@ -485,6 +558,54 @@ como parámetro. Si existe, devuelve sus datos.</p>
             &mdash;
             <section class="phpdocumentor-description"><p>variable que contendrá una instancia de Usuario con datos del usuario que deseamos validar.
 Si no existe un usuario con esas credenciales, devolverá null.</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_buscarUsuario">
+        buscarUsuario()
+        <a href="classes/UsuarioPDO.html#method_buscarUsuario" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="model/UsuarioPDO.php"><a href="files/model-usuariopdo.html"><abbr title="model/UsuarioPDO.php">UsuarioPDO.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">144</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Busca en la base de datos un usuario cuyo código coincida con el recibido como parámetro.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">buscarUsuario</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\type">type</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$codUsuario</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$codUsuario</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\type">type</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>el código del usuario que queremos buscar</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Usuario.html"><abbr title="\Usuario">Usuario</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>instancia de Usuario con los datos del usuario que hemos modificado.
+Si no se pudiera realizar la modificación, devolverá null.</p>
 </section>
 
     

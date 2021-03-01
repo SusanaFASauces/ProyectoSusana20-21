@@ -457,3 +457,43 @@ form[name="funciones"] > input {
 .paginacion input[type="image"] {
     height: auto; width: 48px;
 }
+
+.registro {
+    display: flex;
+    flex-direction: row;
+}
+.registro article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.slider {
+    justify-content: center;
+}
+.formulario {
+    justify-content: space-around;
+}
+.registro article>div{
+    margin: auto;
+    width: 80% !important;
+}
+.registro article img {
+    width: 70%;
+    border-radius: 5px;
+}
+.slider nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider button {
+    margin: 0 10px;
+    font-size: 1.5em;;
+    font-weight: bold;
+    background: none;
+    border: none;
+}

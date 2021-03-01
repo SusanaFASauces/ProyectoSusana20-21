@@ -241,6 +241,16 @@ Search.appendIndex(
             "summary": "Borra\u0020de\u0020la\u0020base\u0020de\u0020datos\u0020el\u0020usuario\u0020cuyo\u0020c\u00F3digo\u0020coincida\u0020con\u0020el\u0020recibido\u0020como\u0020par\u00E1metro.",
             "url": "classes/UsuarioPDO.html#method_borrarUsuario"
         },                {
+            "fqsen": "\\UsuarioPDO\u003A\u003AregistrarUltimaConexion\u0028\u0029",
+            "name": "registrarUltimaConexion",
+            "summary": "Registra\u0020en\u0020la\u0020base\u0020de\u0020datos\u0020la\u0020fecha\u0020de\u0020\u00FAtima\u0020conexi\u00F3n\u0020del\u0020usuario\u0020recibido\u0020como\u0020par\u00E1metro\u0020y\nactualiza\u0020el\u0020n\u00FAmero\u0020de\u0020accesos.",
+            "url": "classes/UsuarioPDO.html#method_registrarUltimaConexion"
+        },                {
+            "fqsen": "\\UsuarioPDO\u003A\u003AbuscarUsuario\u0028\u0029",
+            "name": "buscarUsuario",
+            "summary": "Busca\u0020en\u0020la\u0020base\u0020de\u0020datos\u0020un\u0020usuario\u0020cuyo\u0020c\u00F3digo\u0020coincida\u0020con\u0020el\u0020recibido\u0020como\u0020par\u00E1metro.",
+            "url": "classes/UsuarioPDO.html#method_buscarUsuario"
+        },                {
             "fqsen": "\\REST",
             "name": "REST",
             "summary": "",
@@ -250,6 +260,21 @@ Search.appendIndex(
             "name": "sevicioAPOD",
             "summary": "Llama\u0020al\u0020servicio\u0020API\u0020REST\u0020APOD\u0028Astronomy\u0020Picture\u0020of\u0020the\u0020Day\u0029,\u0020que\u0020nos\u0020devuelve\u0020la\u0020imagen\u0020atron\u00F3mica\u0020del\nd\u00EDa\u0020e\u0020informaci\u00F3n\u0020relativa\u0020a\u0020esta.",
             "url": "classes/REST.html#method_sevicioAPOD"
+        },                {
+            "fqsen": "\\REST\u003A\u003AsevicioOMDb\u0028\u0029",
+            "name": "sevicioOMDb",
+            "summary": "Llama\u0020al\u0020servicio\u0020API\u0020REST\u0020OMdb\u0028Open\u0020Movie\u0020Database\u0029,\u0020que\u0020nos\u0020devuelve\u0020informaci\u00F3n\u0020sobre\u0020pel\u00EDculas.",
+            "url": "classes/REST.html#method_sevicioOMDb"
+        },                {
+            "fqsen": "\\REST\u003A\u003AservicioConversor\u0028\u0029",
+            "name": "servicioConversor",
+            "summary": "Llama\u0020al\u0020servicio\u0020API\u0020REST\u0020Conversor\u0020de\u0020Unidades,\u0020que\u0020convierte\u0020los\u0020datos\u0020recibidos\u0020a\u0020las\u0020unidades\u0020solicitadas.",
+            "url": "classes/REST.html#method_servicioConversor"
+        },                {
+            "fqsen": "\\convertir\u0028\u0029",
+            "name": "convertir",
+            "summary": "Convierte\u0020la\u0020cifra\u0020recibida\u0020a\u0020la\u0020unidad\u0020solicitada.",
+            "url": "namespaces/default.html#function_convertir"
         },                {
             "fqsen": "\\",
             "name": "\\",
