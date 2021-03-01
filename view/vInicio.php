@@ -1,7 +1,7 @@
 <!--
     Autor: Susana Fabián Antón
     Fecha creación: 20/01/2021
-    Última modificación: 24/01/2021
+    Última modificación: 27/02/2021
 -->
 <article class="caja">
     <section class="barra-superior">
@@ -9,15 +9,15 @@
     </section>
     <section class="cuerpo">
         <div class="inicio">
-            <p class="bienvenida">¡Bienvenido <?php echo $descUsuario ?>!</p>
+            <p class="bienvenida">¡Bienvenido <?php echo $descUsuarioEnCurso ?>!</p>
             <div class="contenedor-imagen">
                 <img src="webroot/icons/users.jpg" alt="imagenUsuario">
             </div>
             <div class="info-sesion">
                 <div>
-                    <p>Última conexión</p>
-                    <p>Número de conexiones</p>
-                    <p>Preferencias de idioma</p>
+                    <p><?php echo $mensajeNumAccesos ?></p>
+                    <p><?php echo $mensajeUltimaConexion ?></p>
+                    <!--<p>Preferencias de idioma</p>-->
                 </div>
                 <form name="inicio" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                     <input type="submit" value="Editar perfil" name="editarPerfil">

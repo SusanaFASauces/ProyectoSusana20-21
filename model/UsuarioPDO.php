@@ -2,7 +2,7 @@
 /**
  * @author Susana Fabián Antón
  * @since 20/01/2021
- * @version 20/01/2021
+ * @version 27/01/2021
  */
 class UsuarioPDO implements UsuarioDB {
     /**
@@ -22,7 +22,7 @@ class UsuarioPDO implements UsuarioDB {
         if($resultadoUsuario->rowCount() > 0) { //si se ha encontrado un usuario con esas credenciales
             $fetchUsuario = $resultadoUsuario->fetchObject(); //recogemos los datos del usuario de la base de datos
             //instanciamos un objeto de la clase Usuario con esos datos
-            $oUsuario = new Usuario($fetchUsuario->T01_CodUsuario, $fetchUsuario->T01_Password, $fetchUsuario->T01_DescUsuario, $fetchUsuario->T01_Perfil);         
+            $oUsuario = new Usuario($fetchUsuario->T01_CodUsuario, $fetchUsuario->T01_Password, $fetchUsuario->T01_DescUsuario, $fetchUsuario->T01_NumAccesos, $fetchUsuario->T01_FechaHoraUltimaConexion, $fetchUsuario->T01_Perfil);         
         }
         return $oUsuario;
     }
@@ -51,7 +51,8 @@ class UsuarioPDO implements UsuarioDB {
      * @param type $codUsuario el código del usuario que vamos a dar de alta.
      * @param type $descUsuario la descripción del usuario que vamos a dar de alta.
      * @param type $password la contraseña del usuario que vamos a dar de alta.
-     * @return \Usuario variable que contendrá un instancia de Usuario con los datos del usuario que hemos
+     * @return \Usuario instancia de Usuario con los datos del usuario que hemos 
+     * 
      * añadido a la base de datos. Si no se pudiera dar de alta al usuario, devolverá null.
      */
     public static function altaUsuario($codUsuario, $descUsuario, $password) {
@@ -75,8 +76,8 @@ class UsuarioPDO implements UsuarioDB {
      * 
      * @param type $codUsuario el código del usuario que se desea modificar
      * @param type $newDescUsuario la nueva descripción del usuario
-     * @return \Usuario variable que contendrá un instancia de Usuario con los datos del usuario que hemos
-     * modificado. Si no se pudiera realizar la modificación, devolverá null.
+     * @return \Usuario instancia de Usuario con los datos del usuario que hemos modificado.
+     * Si no se pudiera realizar la modificación, devolverá null.
      */
     public static function modificarUsuario($codUsuario, $newDescUsuario) {
         $oUsuario = null; //variable en la que almacenaremos el usuario que vamos a modificar
@@ -111,5 +112,45 @@ class UsuarioPDO implements UsuarioDB {
         else { //si no
             return false;
         }
+    }
+    
+    /**
+     * Registra en la base de datos la fecha de útima conexión del usuario recibido como parámetro y
+     * actualiza el número de accesos.
+     * 
+     * @param type $codUsuario el código del usuario que queremos actualizar.
+     * @param type $fechaConexion la nueva fecha de conexión del usuario
+     * @return \Usuario instancia de Usuario con los datos del usuario que hemos modificado.
+     * Si no se pudiera realizar la modificación, devolverá null.
+     */
+    public static function registrarUltimaConexion($codUsuario, $fechaConexion) {
+        $oUsuario = null; //variable en la que almacenaremos el usuario que vamos a modificar
+        //actualizamos la última conexión, y el número de conexiones del usuario con ese código en la base de datos
+        $updateUsuario = "UPDATE T01_Usuario SET T01_FechaHoraUltimaConexion=?, T01_NumAccesos=T01_NumAccesos+1 WHERE T01_CodUsuario=?";
+        $resultadoUpdate = DBPDO::ejecutarConsulta($updateUsuario, [$fechaConexion, $codUsuario]); //ejecutamos la consulta
+        if($resultadoUpdate > 0) { //si se ha actualizado la tabla
+            $oUsuario = self::buscarUsuario($codUsuario); //buscamos el usuario en la base de datos
+        }
+        return $oUsuario;
+    }
+    
+    /**
+     * Busca en la base de datos un usuario cuyo código coincida con el recibido como parámetro.
+     * 
+     * @param type $codUsuario el código del usuario que queremos buscar
+     * @return \Usuario instancia de Usuario con los datos del usuario que hemos modificado.
+     * Si no se pudiera realizar la modificación, devolverá null.
+     */
+    private static function buscarUsuario($codUsuario) {
+        $oUsuario = null; //variable en la que almacenaremos el usuario que estamos buscando
+        //buscamos en la base de datos un usuario con esas credenciales
+        $selectUsuario = "SELECT * FROM T01_Usuario WHERE T01_CodUsuario=?";
+        $resultadoUsuario = DBPDO::ejecutarConsulta($selectUsuario, [$codUsuario]); //ejecutamos la consulta
+        if($resultadoUsuario->rowCount() > 0) { //si se ha encontrado un usuario con esas credenciales
+            $fetchUsuario = $resultadoUsuario->fetchObject(); //recogemos los datos del usuario de la base de datos
+            //instanciamos un objeto de la clase Usuario con esos datos
+            $oUsuario = new Usuario($fetchUsuario->T01_CodUsuario, $fetchUsuario->T01_Password, $fetchUsuario->T01_DescUsuario, $fetchUsuario->T01_NumAccesos, $fetchUsuario->T01_FechaHoraUltimaConexion, $fetchUsuario->T01_Perfil);    
+        }
+        return $oUsuario;
     }
 }
